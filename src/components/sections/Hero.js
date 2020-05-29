@@ -124,7 +124,8 @@ const Hero = ({
 
   return (
     <section {...props} className={outerClasses}>
-      <div className='container '>
+    {/* TODO: Maybe add container back to class */}
+      <div className='lg-pl-32 lg-pr-32'>
         <SmallHeroScroll data={activeHeroContent} click={buttonClick} />
         <br className='lg-hide' />
         <br className='lg-hide' />

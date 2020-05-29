@@ -18,7 +18,9 @@ const Home = () => {
     <>
       <Hero topDivider className='illustration-section-01' hasBgColor />
       <br />
-      <TextImage />
+      <div className='lg-pl-32 lg-pr-32'>
+        <TextImage />
+      </div>
       <FeaturesTiles />
       <LargeImage />
       <br />

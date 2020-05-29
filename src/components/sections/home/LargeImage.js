@@ -42,7 +42,8 @@ export default function LargeImage({
       <br className='sm-hide' />
       <br className='sm-hide' />
       <br className='sm-hide' />
-      <div className='container'>
+          {/* TODO: MAYBE ADD CONTAINER CLASS LINE BELOW */}
+      <div className='lg-pl-32 lg-pr-32'>
         <div className='img-absolute relative'>
           <div className='relative reveal-from-bottom sm-hide '>
             <img
