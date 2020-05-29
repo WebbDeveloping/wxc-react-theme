@@ -1,0 +1,153 @@
+.hero {
+  .section-inner {
+    padding-top: $hero--padding-t__mobile;
+    padding-bottom: $hero--padding-b__mobile;
+  }
+}
+
+.hero-content {
+  h1 {
+    font-size: 57px !important;
+    line-height: 59px !important;
+    letter-spacing: -0.3px;
+  }
+}
+
+.hero-bg-img {
+  display: none;
+}
+.img-absolute {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  z-index: 999999;
+  opacity: 0.8;
+}
+.sm-img-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -999999;
+  opacity: 0.5;
+  transform: translate(0, 0);
+}
+
+.hero__mask {
+  height: 100%;
+  fill: #3fa0ff;
+  z-index: 200000;
+}
+.hero-svg {
+  width: auto;
+  height: 100%;
+  fill: get-color(light, 3);
+  z-index: 100000;
+}
+.box-container {
+  width: 100%;
+  .box {
+    height: 80px;
+    width: 100%;
+    &:hover {
+      h4 {
+        color: get-color(secondary, 2);
+      }
+    }
+    h4 {
+      color: color(heading);
+    }
+  }
+}
+.text-shadow {
+  text-shadow: white 0px 0px 2.5px;
+}
+.sm-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  transform: translate(0, 0);
+  h1 {
+    color: get-color(light, 1);
+  }
+}
+.align-item {
+  align-items: center;
+}
+.text-bg {
+  background-image: linear-gradient(
+    to top right,
+    get-color(secondary, 2),
+    rgba(0, 129, 255, 0)
+  );
+  height: 100%;
+  // opacity: 0.8 !important;
+}
+.max-height {
+  max-height: 100% !important;
+}
+
+.hero-inner {
+  // Affects only hero full
+  > .hero-content + .hero-figure,
+  > .hero-figure + .hero-content {
+    margin-top: $hero--inner-padding-v_mobile;
+  }
+
+  > .hero-figure {
+    > a {
+      display: inline-flex;
+      // prevents stretching
+      align-items: center;
+      vertical-align: top;
+    }
+  }
+}
+
+@include media('<=medium') {
+  .hero {
+    .split-wrap {
+      .split-item {
+        .split-item-content {
+          margin-bottom: $hero--inner-padding-v_mobile;
+        }
+      }
+
+      &.invert-mobile {
+        .split-item {
+          .split-item-image {
+            margin-bottom: $hero--inner-padding-v_mobile;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media('>medium') {
+  .hero-bg-img {
+    // position: relative;
+    height: 55%;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 129, 255, 0.8),
+      rgba(0, 55, 109, 0.8)
+    );
+    background-size: cover;
+    background-position: left;
+  }
+  .hero {
+    .section-inner {
+      padding-top: $hero--padding-t__desktop;
+      padding-bottom: $hero--padding-b__desktop;
+    }
+  }
+
+  .hero-inner {
+    // Affects only hero full
+    > .hero-content + .hero-figure,
+    > .hero-figure + .hero-content {
+      margin-top: $hero--inner-padding-v_desktop;
+    }
+  }
+}

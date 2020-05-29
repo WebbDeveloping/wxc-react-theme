@@ -1,0 +1,112 @@
+// Colors
+
+// The color palette
+$palette: (
+	light: (
+		1: #FFFFFF,
+		2: #F0F0F0,
+		3: #717D86,
+		4: #e1dfdb,
+		5: #3fa0ff, // blue-base
+		6: #48a5ff,
+		7: #6db7ff,
+		8: #91c9ff,
+		9: #b6dbff
+	),
+	dark: (
+		1: #151719,
+		2: #002448,
+		3: #33363A,
+		4: #313131,
+		5:	#404040,
+		6: #2a2728,
+		7: #535150 //iphone grey
+	),
+	primary: (
+		1: #6163FF,
+		2: #ACADFF,
+		3: #5658DD,
+		4: #E9E9FF,
+		5: #84b424, 
+		6: #0081ff, //blue-main
+		7: #006EDA,
+		8: #005cb6,
+		9: #004991,
+		10:#00376D,
+		11: #002448,
+		12: #001224
+ 	),
+	secondary: (
+		1: #ff7d00, //accent
+		2: #ffa300,
+		3: #003366,
+		4: #D2F9EE
+	),
+	alert: (
+		error: #FF6171,
+		warning: #FFA173,
+		success: #24E5AF
+	),
+  theme: (
+    1: #e9e9e9, // Linen
+    2: #cdcdcd, // Plaster
+    3: #88bbd6, // fresh water
+    4: #99d3df, // ice
+    5: #6e6658
+  )
+);
+
+// Base typography: color
+$color: (
+	heading:				get-color(light, 1),
+	base: 					get-color(light, 1),
+	high-contrast: 			get-color(dark, 1),
+	mid-contrast: 			get-color(dark, 2),
+	low-contrast: 			get-color(dark, 3),
+	primary:				get-color(primary, 6),
+	secondary:				get-color(secondary, 2),
+	error:					get-color(alert, error),
+	warning:				get-color(alert, warning),
+	success:				get-color(alert, success),
+	// ↓ Inverted colors
+	heading-inverse:		get-color(dark, 1),
+	base-inverse:			get-color(light, 3),
+	high-contrast-inverse: 	get-color(dark, 1),
+	mid-contrast-inverse: 	get-color(dark, 2),
+	low-contrast-inverse: 	get-color(light, 3)
+);
+
+// Borders and dividers: color
+$border--color: (
+	divider:			get-color(primary, 10),
+	divider-inverse:	get-color(dark, 1)
+);
+
+// Icons: fill color
+$icon--color: (
+	hamburger:				get-color(secondary, 2),			// hamburger icon
+	accordion:				get-color(primary, 1),			// accordion icon
+	social: 				get-color(secondary, 2),			// social icons
+	social-hover: 			get-color(primary, 2),			// social icons (:hover)
+	modal:					get-color(light, 3),			// modal icon
+	modal-hover:			get-color(light, 2),			// modal icon (:hover)
+    news-more:			    get-color(primary, 2),		// news - read more link arrow    
+	// ↓ Inverted colors
+	hamburger-inverse:		get-color(dark, 2),				// hamburger icon
+	accordion-inverse:		get-color(primary, 1),			// accordion icon
+	social-inverse: 		null,							// social icons
+	social-hover-inverse: 	null							// social icons (:hover)
+);
+
+// Misc elements: background color
+$bg--color: (
+	body: 			get-color(primary, 11),
+	body-shadow:	0 20px 48px rgba(get-color(dark, 1), .8),	// body shadow when a boxed layout is used (set to null if don't want a shadow)
+	body-outer:		lighten(get-color(dark, 1), 2%),			// outer bg color when a boxed layout is used
+	bg-color: 		lighten(get-color(dark, 2), 9%),			// .has-bg-color helper class
+	shadow: 		0 24px 64px rgba(get-color(dark, 1), .64),	// .has-shadow helper class
+	code: 			darken(get-color(dark, 1), 3%),
+	code-inverse:	darken(get-color(dark, 1), 3%),
+	nav-bar: get-color(secondary, 3),
+	card-color: get-color(secondary, 3)
+);
