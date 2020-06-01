@@ -17,6 +17,7 @@ import Consumer from './views/Consumer';
 import Merchants from './views/Merchants';
 import Acquirer from './views/Acquirers';
 import Bankers from './views/Bankers';
+import SignUp from './components/sections/signUp/SignUp';
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -78,6 +79,12 @@ const App = () => {
             exact
             path='/bankers'
             component={Bankers}
+            layout={LayoutDefault}
+          />
+          <AppRoute
+            exact
+            path='/sign-up'
+            component={SignUp}
             layout={LayoutDefault}
           />
         </Switch>

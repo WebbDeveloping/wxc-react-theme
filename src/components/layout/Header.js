@@ -141,7 +141,7 @@ const Header = ({
                     <ul className='list-reset header-nav-right'>
                       <li>
                         <Link
-                          to='#0'
+                          to='/sign-up'
                           className='button button-secondary button-wide-mobile button-sm'
                           onClick={closeMenu}
                         >

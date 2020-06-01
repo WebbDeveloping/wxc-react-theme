@@ -27,7 +27,7 @@ export default function HaroCard(props) {
                   tag='a'
                   color='secondary'
                   wideMobile
-                  href='https://world-xchange.com/index.php'
+                  href='/sign-up'
                 >
                   {data['button-text']}
                 </Button>

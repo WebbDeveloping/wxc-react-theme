@@ -64,10 +64,6 @@ const data = {
     }
   ]
 };
-// const card1 = data.properties[0];
-// const card2 = data.properties[1];
-// const card3 = data.properties[2];
-// const card4 = data.properties[3];
 
 const propTypes = {
   ...SectionProps.types
@@ -91,13 +87,11 @@ const Hero = ({
   const handleClick = () => setAnimate(!animate);
   const [dataList, setDataList] = useState(data.properties);
   const [activeHeroContent, setHeroContent] = useState(data.properties[0]);
-  // const [activeTab, setActiveTab] = useState(2);
 
   const buttonClick = e => {
-    // console.log(e);
+
     if (e == 1) {
       setHeroContent(data.properties[0]);
-      // setActiveTab(data.properties[0].active + 1);
     } else if (e == 2) {
       setHeroContent(data.properties[1]);
     } else if (e == 3) {
@@ -106,7 +100,6 @@ const Hero = ({
       setHeroContent(data.properties[3]);
     }
   };
-  // console.log(activeHeroContent);
   const outerClasses = classNames(
     'hero section center-content',
     topOuterDivider && 'has-top-divider',

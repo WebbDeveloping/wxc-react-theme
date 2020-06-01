@@ -37,6 +37,9 @@
 .flex-row {
   display: flex;
   flex-direction: row;
+  &-start{
+    justify-content: flex-start;
+  }
 }
 .flex-row-center {
   display: flex;
@@ -598,7 +601,16 @@ img.has-shadow {
 }
 
 .pl-32 {
-  padding-left: 32px;
+  padding-left: 32px !important;
+}
+.pr-32 {
+  padding-right: 32px !important;
+}
+.ml-32 {
+  margin-left: 32px !important;
+}
+.mr-32 {
+  margin-right: 32px !important;
 }
 
 // Spacing, spacers
@@ -656,6 +668,9 @@ img.has-shadow {
   }
   .sm-hide {
     display: none !important;
+  }
+  .sm-w-100{
+    width: 100% !important;
   }
   .col-sm {
     display: flex;
