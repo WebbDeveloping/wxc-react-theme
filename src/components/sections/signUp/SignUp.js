@@ -12,11 +12,6 @@ import StepThree from './StepThree';
 import StepTwo from './StepTwo';
 import SubmittedForm from './SubmittedForm';
 
-// let step1 = 'active'
-let step1 = '';
-let step2 = 'lg-hide';
-let step3 = 'lg-hide';
-
 export default function SignUp({
   className,
   topOuterDivider,
@@ -28,8 +23,36 @@ export default function SignUp({
   pushLeft,
   ...props
 }) {
-  const [name, setName] = useState('');
   const [step, setStep] = useState(1);
+  const [data, setData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    born: '',
+    type: '',
+    number: '',
+    secret: '',
+    name: '',
+    quest: '',
+    color: '',
+    swollow: ''
+  });
+  // FORM ONE
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  //FORM TWO
+  const [born, setBorn] = useState('');
+  const [type, setType] = useState('');
+  const [number, setNumber] = useState('');
+  const [secret, setSecret] = useState('');
+  //FORM THREE
+  const [name, setName] = useState('');
+  const [quest, setQuest] = useState('');
+  const [color, setColor] = useState('');
+  const [swollow, setSwollow] = useState('');
 
   const outerClasses = classNames(
     'testimonial section',
@@ -51,63 +74,107 @@ export default function SignUp({
       setStep(2);
     } else if (e == 3) {
       setStep(3);
-    }
-     else if (e == 4) {
+    } else if (e == 4) {
       setStep(4);
+    } else if (e == 1) {
+      setStep(1);
     }
-    // console.log('step', step);
-  };
-  const ChangeHandler = e => {
-    let name = e.target.name;
-    let val = e.target.value;
-    setName(name);
   };
 
-  // function FormSteps({ step, name }) {
-  //   return (
-  //     <div>
-  //       {(function() {
-  //         console.log('s',step);
-  //         switch (step) {
-  //           case 1:
-  //             return <StepOne step={step} />
-  //             // break;
-  //           // case 2:
-  //           //   return <StepTwo step={step} />;
-  //           // case 3:
-  //           //   return <StepThree step={step} />;
-  //           default:
-  //             return <StepOne step={step} />;
-  //         }
-  //       })()}
-  //     </div>
-  //   );
-  // }
-  const checkStep = e =>{
-    console.log('step', step)
-    if(step <= 3){
-      return step == 2 ? <StepTwo nextStep={nextStep} /> : <StepThree nextStep={nextStep} />;
-    } else if( step == 4){
-      return <SubmittedForm nextStep={nextStep} />
+  const handleForm = e => {
+    if (e == 'form one') {
+      console.log(firstName, lastName, email, password);
+      nextStep(2);
+    } else if (e == 'form two') {
+      console.log(born, type, number, secret);
+      nextStep(3);
     }
-  }
-  // console.log(steps);
+  };
+  const submit = userData => {
+    setData({
+      firstName,
+      lastName,
+      email,
+      password,
+      born,
+      type,
+      number,
+      secret,
+      name,
+      quest,
+      color,
+      swollow
+    });
+    console.log('data', data);
+  };
 
-  const tilesClasses = classNames('tiles-wrap', pushLeft && 'push-left');
+  const checkStep = e => {
+    if (step <= 3) {
+      return step == 2 ? (
+        <StepTwo
+        nextStep={nextStep}
+        setData={setData}
+         data={data}
+        // data={data}
+        //   submit={submit}
+        //   nextStep={nextStep}
+        //   handleForm={handleForm}
+        //   setBorn={setBorn}
+        //   setType={setType}
+        //   setNumber={setNumber}
+        //   setSecret={setSecret}
+        />
+      ) : (
+        <StepThree
+        nextStep={nextStep}
+        setData={setData}
+         data={data}
+         submit={submit}
+        // data={data}
+        //   nextStep={nextStep}
+        //   setName={setName}
+        //   setQuest={setQuest}
+        //   setColor={setColor}
+        //   setSwollow={setSwollow}
+        />
+      );
+    } else if (step == 4) {
+      return <SubmittedForm nextStep={nextStep} />;
+    }
+  };
+
   return (
     <section {...props} className={outerClasses}>
       <div className=''>
         <br className='sm-hide' />
         <div className='sm-hide'>
-          <PageSteps />
+          <PageSteps step={step} />
         </div>
         <br className='sm-hide' />
         <div className={innerClasses}>
-          <div className='flex-row-around col-sm'>
+          <div className='flex-row-around col-sm-center'>
             {/* Form BOX */}
-            <div className={`tiles-item w-100 bg-color-primary`}>
-             {step == 1 ? <StepOne nextStep={nextStep} /> : checkStep()}
+            <div className={` w-100 bg-color-primary`}>
+              {step == 1 ? (
+                <StepOne
+                nextStep={nextStep}
+                 setData={setData}
+                  data={data}
+                  // setFirstName={setFirstName}
+                  // setLastName={setLastName}
+                  // setEmail={setEmail}
+                  // setPassword={setPassword}
+                  // submit={submit}
+                  // handleForm={handleForm}
+                />
+              ) : (
+                checkStep()
+              )}
             </div>
+            <br className='lg-hide' />
+            <br className='lg-hide' />
+            <br className='lg-hide' />
+            <br className='lg-hide' />
             {/* image container */}
             <div
               className={`hero-content flex-col-center sm-w-100 w-50 lg-mr-32`}

@@ -123,7 +123,7 @@ const Hero = ({
         <br className='lg-hide' />
         <br className='lg-hide' />
         <div className='lg-hide'>
-          <Button tag='a' color='secondary' wideMobile href='#'>
+          <Button tag='a' color='secondary' wideMobile href='/sign-up'>
             {activeHeroContent['button-text']}
           </Button>
         </div>

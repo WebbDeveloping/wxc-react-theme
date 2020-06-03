@@ -18,6 +18,7 @@ import Merchants from './views/Merchants';
 import Acquirer from './views/Acquirers';
 import Bankers from './views/Bankers';
 import SignUp from './components/sections/signUp/SignUp';
+import LegalAgreement from './components/sections/signUp/LegalAgreement';
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -85,6 +86,12 @@ const App = () => {
             exact
             path='/sign-up'
             component={SignUp}
+            layout={LayoutDefault}
+          />
+          <AppRoute
+            exact
+            path='/legal-agreement'
+            component={LegalAgreement}
             layout={LayoutDefault}
           />
         </Switch>
