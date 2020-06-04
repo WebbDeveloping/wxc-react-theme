@@ -36,7 +36,8 @@ export default function SignUp({
     name: '',
     quest: '',
     color: '',
-    swollow: ''
+    swollow: '',
+    termsAccepted: false
   });
   // FORM ONE
   const [firstName, setFirstName] = useState('');
@@ -53,6 +54,7 @@ export default function SignUp({
   const [quest, setQuest] = useState('');
   const [color, setColor] = useState('');
   const [swollow, setSwollow] = useState('');
+  const [termsAccepted, setTermsAccepted] = useState('');
 
   const outerClasses = classNames(
     'testimonial section',
@@ -81,15 +83,15 @@ export default function SignUp({
     }
   };
 
-  const handleForm = e => {
-    if (e == 'form one') {
-      console.log(firstName, lastName, email, password);
-      nextStep(2);
-    } else if (e == 'form two') {
-      console.log(born, type, number, secret);
-      nextStep(3);
-    }
-  };
+  // const handleForm = e => {
+  //   if (e == 'form one') {
+  //     console.log(firstName, lastName, email, password);
+  //     nextStep(2);
+  //   } else if (e == 'form two') {
+  //     console.log(born, type, number, secret);
+  //     nextStep(3);
+  //   }
+  // };
   const submit = userData => {
     setData({
       firstName,
@@ -126,8 +128,8 @@ export default function SignUp({
         />
       ) : (
         <StepThree
-        nextStep={nextStep}
-        setData={setData}
+         nextStep={nextStep}
+         setData={setData}
          data={data}
          submit={submit}
         // data={data}
@@ -139,6 +141,7 @@ export default function SignUp({
         />
       );
     } else if (step == 4) {
+      //Thank You Page
       return <SubmittedForm nextStep={nextStep} />;
     }
   };

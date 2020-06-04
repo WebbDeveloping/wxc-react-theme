@@ -2,27 +2,16 @@ import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 
 export default function LegalAgreement() {
-  const [accepted, setAccepted] = useState(false);
 
-  const submitTerms = () =>{
-    if(accepted){
-      console.log('submitted')
-    }
-  }
-  const handleChange = (e)=>{
-    setAccepted(e.target.checked)
-    // console.log('a', accepted)
-  }
-  console.log(accepted)
   return (
     //we need padding 30 around the whole container
     <div>
-      <div className='p-32'>
+      <div className='p-32 text-color-high'>
         <br />
         <br />
         <br />
         <br />
-        <h4>XPay - Terms of Service- Consumer (U.S.)</h4>
+        <h4 className='text-color-high'>XPay - Terms of Service- Consumer (U.S.)</h4>
         <p>
           These Terms of Service are a legal agreement between you and World
           XPay Inc., (XPay), a wholly-owned business subsidiary of World
@@ -1514,7 +1503,7 @@ export default function LegalAgreement() {
           </ul>
         </ol>
       </div>
-      <form className='container flex-col-center'>
+      {/* <form className='container flex-col-center'>
         <div className='terms-condition flex-col-center'>
           <label className='terms-label'>
             <input className='terms-input' type='checkbox' checked={accepted}  onChange={handleChange}  />
@@ -1526,7 +1515,7 @@ export default function LegalAgreement() {
           </Link>
           </u>
         </div>
-      </form>
+      </form> */}
     </div> //last div
   );
 }

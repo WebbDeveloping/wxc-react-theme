@@ -33,3 +33,10 @@
 .terms-text{
     cursor: pointer;
 }
+.scroll-box{
+    border: 2px solid get-color(secondary, 1);
+    height: 800px;
+    width: 500px;
+    overflow: scroll;
+    background-color: get-color(light, 1);
+}
