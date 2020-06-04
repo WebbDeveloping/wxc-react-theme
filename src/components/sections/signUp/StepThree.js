@@ -63,7 +63,7 @@ export default function StepThree({ nextStep, submit, data, setData }) {
               value={data.swollow}
               onChange={e => setData({ ...data, swollow: e.target.value })}
               type='text'
-              placeholder='What is the air speed velocity of a swollow?'
+              placeholder='What is the air speed velocity of an unladen swollow?'
             />
             <div className='terms-text'>
               <u>
