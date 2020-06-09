@@ -29,10 +29,14 @@ export default function SignUp({
     lastName: '',
     email: '',
     password: '',
-    born: '',
-    type: '',
+    confirmPassword: '',
+    addressOne: '',
+    addressTwo: '',
+    zipCode: '',
+    country: '',
+    state: '',
+    city: '',
     number: '',
-    secret: '',
     name: '',
     quest: '',
     color: '',
@@ -45,10 +49,13 @@ export default function SignUp({
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   //FORM TWO
-  const [born, setBorn] = useState('');
-  const [type, setType] = useState('');
+  const [addressOne, setaddressOne] = useState('');
+  const [addressTwo, setaddressTwo] = useState('');
+  const [zipCode, setzipCode] = useState('');
+  const [country, setcountry] = useState('');
+  const [state, setstate] = useState('');
+  const [city, setcity] = useState('');
   const [number, setNumber] = useState('');
-  const [secret, setSecret] = useState('');
   //FORM THREE
   const [name, setName] = useState('');
   const [quest, setQuest] = useState('');
@@ -83,25 +90,20 @@ export default function SignUp({
     }
   };
 
-  // const handleForm = e => {
-  //   if (e == 'form one') {
-  //     console.log(firstName, lastName, email, password);
-  //     nextStep(2);
-  //   } else if (e == 'form two') {
-  //     console.log(born, type, number, secret);
-  //     nextStep(3);
-  //   }
-  // };
   const submit = userData => {
+    console.log('ud', userData);
     setData({
       firstName,
       lastName,
       email,
       password,
-      born,
-      type,
+      addressOne,
+      addressTwo,
+      zipCode,
+      country,
+      state,
+      city,
       number,
-      secret,
       name,
       quest,
       color,
@@ -113,31 +115,13 @@ export default function SignUp({
   const checkStep = e => {
     if (step <= 3) {
       return step == 2 ? (
-        <StepTwo
-        nextStep={nextStep}
-        setData={setData}
-         data={data}
-        // data={data}
-        //   submit={submit}
-        //   nextStep={nextStep}
-        //   handleForm={handleForm}
-        //   setBorn={setBorn}
-        //   setType={setType}
-        //   setNumber={setNumber}
-        //   setSecret={setSecret}
-        />
+        <StepTwo nextStep={nextStep} setData={setData} data={data} />
       ) : (
         <StepThree
-         nextStep={nextStep}
-         setData={setData}
-         data={data}
-         submit={submit}
-        // data={data}
-        //   nextStep={nextStep}
-        //   setName={setName}
-        //   setQuest={setQuest}
-        //   setColor={setColor}
-        //   setSwollow={setSwollow}
+          nextStep={nextStep}
+          setData={setData}
+          data={data}
+          submit={submit}
         />
       );
     } else if (step == 4) {
@@ -157,19 +141,9 @@ export default function SignUp({
         <div className={innerClasses}>
           <div className='flex-row-around col-sm-center'>
             {/* Form BOX */}
-            <div className={` w-100 bg-color-primary`}>
+            <div className=' lg-w-100  bg-color-primary'>
               {step == 1 ? (
-                <StepOne
-                nextStep={nextStep}
-                 setData={setData}
-                  data={data}
-                  // setFirstName={setFirstName}
-                  // setLastName={setLastName}
-                  // setEmail={setEmail}
-                  // setPassword={setPassword}
-                  // submit={submit}
-                  // handleForm={handleForm}
-                />
+                <StepOne nextStep={nextStep} setData={setData} data={data} />
               ) : (
                 checkStep()
               )}
@@ -182,12 +156,40 @@ export default function SignUp({
             <div
               className={`hero-content flex-col-center sm-w-100 w-50 lg-mr-32`}
             >
-              <Image
+              {/* <Image
                 src={require(`../../../assets/Svg/security.svg`)}
                 alt='Features tile icon 03'
                 width={450}
                 height={450}
-              />
+              /> */}
+              <div className='login-box flex-col card-bg'>
+                <div className='text-color-primary '>
+                  <div className='m-0 p-0 bg-color-light-2'>
+                    <h6 className='text-color-secondary m-0 p-0'>
+                      “A hard-to-beat combo: free checking and high-yield
+                      savings”
+                    </h6>
+                  </div>
+                  <p className='text-color-light mt-32'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sint recusandae, natus rerum deleniti nihil doloremque
+                    minima consequuntur assumenda at et optio illo, quibusdam ab
+                    in molestias porro aperiam quasi aut.
+                  </p>
+                  <p className='text-color-secondary'>- Joe Dirt</p>
+                </div>
+                {/* <div className='bg-white text-color-primary m-16 p-16'>
+                  <h4 className='text-color-primary'>
+                    “A hard-to-beat combo: free checking and high-yield savings”
+                  </h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sint recusandae, natus rerum deleniti nihil doloremque
+                    minima consequuntur assumenda at et optio illo, quibusdam ab
+                    in molestias porro aperiam quasi aut.
+                  </p>
+                </div> */}
+              </div>
             </div>
           </div>
         </div>

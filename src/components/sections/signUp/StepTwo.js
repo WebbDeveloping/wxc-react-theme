@@ -1,38 +1,103 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Input from '../../elements/Input';
 import Button from '../../elements/Button';
+import Select from '../../elements/Select';
 
 export default function StepTwo({ nextStep, data, setData }) {
-
-
   return (
-    <form className='tiles-item-inner center-content w-100'>
-      <h3>SELL US YOUR SOUL</h3>
-      <br />
-      <div className='flex-col text-left '>
-        <div className='flex-col'>
-          <Input value={data.born} onChange={e => setData({...data, born: e.target.value})} type='text' placeholder='First Born' />
-        </div>
-        <br />
-        <div className='flex-col'>
-          <Input value={data.type} onChange={e => setData({...data, type: e.target.value})} type='text' placeholder='Blood Type' />
-        </div>
-        <br />
-        <div className='flex-col'>
-          <Input value={data.number} onChange={e => setData({...data, number: e.target.value})} type='text' placeholder='Human Id Number' />
-        </div>
-        <br />
-        <div className='flex-col'>
-          <Input value={data.secret} onChange={e => setData({...data, secret: e.target.value})} type='text' placeholder='Deepest Secret' />
-        </div>
-        <br />
-        <br />
+    <div className='login-box'>
+    <h2>Tell US ABOUT YOURSELF</h2>
+    <form>
+      <div className='user-box'>
+        <input
+          type='text'
+          name=''
+          required=''
+          value={data.AddressOne}
+          onChange={e => setData({ ...data, addressOne: e.target.value })}
+        />
+        <label>Address One</label>
+      </div>
+      <div className='user-box'>
+        <input
+          type='text'
+          name=''
+          required=''
+          value={data.AddressTwo}
+          onChange={e => setData({ ...data, addressTwo: e.target.value })}
+        />
+        <label>Address Two</label>
+      </div>
+      <div className='user-box'>
+        <input
+          type='text'
+          name=''
+          required=''
+          value={data.zipCode}
+          onChange={e => setData({ ...data, zipCode: e.target.value })}
+        />
+        <label>Zip Code</label>
+      </div>
+      <div className='user-box'>
+        <input
+          type='text'
+          name=''
+          required=''
+          value={data.country}
+          onChange={e => setData({ ...data, country: e.target.value })}
+        />
+        <label>Country</label>
+      </div>
+      <div className='user-box'>
+        <input
+          type='text'
+          name=''
+          required=''
+          value={data.state}
+          onChange={e =>
+            setData({ ...data, state: e.target.value })
+          }
+        />
+        <label>State</label>
+      </div>
+      <div className='user-box'>
+        <input
+          type='text'
+          name=''
+          required=''
+          value={data.city}
+          onChange={e =>
+            setData({ ...data, city: e.target.value })
+          }
+        />
+        <label>City</label>
+      </div>
+      <div className='user-box'>
+        <input
+          type='text'
+          name=''
+          required=''
+          value={data.number}
+          onChange={e =>
+            setData({ ...data, number: e.target.value })
+          }
+        />
+        <label>Phone Number</label>
+      </div>
+      {/* <a href='#'>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </a> */}
+      <div classNamae='login-button'>
         <div className='flex-row-around'>
           <div className='pr-8'>
             <Button
               value='value 2 bruh'
               type='submit'
-              tag='a'
+              tag='button'
               color='primary'
               wideMobile
               onClick={() => nextStep(1)}
@@ -45,7 +110,7 @@ export default function StepTwo({ nextStep, data, setData }) {
             <Button
               value='value 2 bruh'
               type='submit'
-              tag='a'
+              tag='button'
               color='secondary'
               wideMobile
               onClick={() => nextStep(3)}
@@ -56,5 +121,6 @@ export default function StepTwo({ nextStep, data, setData }) {
         </div>
       </div>
     </form>
+  </div>
   );
 }

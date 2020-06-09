@@ -118,22 +118,22 @@ const Header = ({
                     </li> */}
                     <li>
                       <Link to='/Consumer' onClick={closeMenu}>
-                        Consumer
+                        Personal
                       </Link>
                     </li>
                     <li>
                       <Link to='/Merchants' onClick={closeMenu}>
-                        Merchants
+                        Business
                       </Link>
                     </li>
                     <li>
                       <Link to='/Acquirer' onClick={closeMenu}>
-                        Acquirer
+                        Commercial
                       </Link>
                     </li>
                     <li>
                       <Link to='/Bankers' onClick={closeMenu}>
-                        Bankers
+                        About
                       </Link>
                     </li>
                   </ul>

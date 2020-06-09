@@ -64,6 +64,11 @@
   flex-direction: row;
   justify-content: flex-end;
 }
+.flex-row-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
 .flex-col-center {
   display: flex;
   flex-direction: column;
@@ -218,6 +223,9 @@
 }
 .bg-light-grey {
   background-color: get-color(secondary, 3);
+}
+.bg-white {
+  background-color: get-color(light, 1);
 }
 .card-bg {
   background-color: get-color(secondary, 3);
@@ -469,7 +477,7 @@ img.has-shadow {
 
 // Spacing, padding
 .p-0 {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .pt-0 {
@@ -676,6 +684,9 @@ img.has-shadow {
   .sm-w-100{
     width: 100% !important;
   }
+  // .sm-w-50{
+  //   width: 100% !important;
+  // }
   .sm-p-8{
     padding: 8px !important;
   }
@@ -785,6 +796,9 @@ img.has-shadow {
   //LARGE HELPERS
   .lg-hide {
     display: none;
+  }
+  .lg-w-100{
+    width: 100% !important;
   }
   .lg-p-32 {
     padding: 32px !important;
