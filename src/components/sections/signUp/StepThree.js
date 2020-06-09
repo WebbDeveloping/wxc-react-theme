@@ -29,7 +29,7 @@ export default function StepThree({ nextStep, submit, data, setData }) {
   return (
     <div className='login-box'>
       <form className={`center-content  ${hideForm}`}>
-        <h3>The Bridge</h3>
+        <h3>Connect Your Bank</h3>
         <br />
         {/* <div className='flex-col text-left user-box'> */}
           <div className='user-box text-color-secondary'>
@@ -39,7 +39,7 @@ export default function StepThree({ nextStep, submit, data, setData }) {
               type='text'
               // placeholder='What is your name?'
             />
-            <label>Box 1</label>
+            <label>Bank Name</label>
           </div>
           <br />
           <div className='user-box'>
@@ -49,7 +49,7 @@ export default function StepThree({ nextStep, submit, data, setData }) {
               type='text'
               // placeholder='What is your quest?'
             />
-            <label>Box 1</label>
+            <label>Credit Card #</label>
           </div>
           <br />
           <div className='user-box'>
@@ -59,7 +59,7 @@ export default function StepThree({ nextStep, submit, data, setData }) {
               type='text'
               // placeholder='what is your favorite color?'
             />
-            <label>Box 1</label>
+            <label>Account #</label>
           </div>
           <br />
           <div className='user-box'>
@@ -69,7 +69,7 @@ export default function StepThree({ nextStep, submit, data, setData }) {
               type='text'
               // placeholder='What is the air speed velocity of an unladen swollow?'
             />
-            <label>Box 1</label>
+            <label>Routing #</label>
             <div className='flex-row-start'>
               <img
                 className={`terms-checkmark ${
@@ -77,8 +77,6 @@ export default function StepThree({ nextStep, submit, data, setData }) {
                 }`}
                 src={require('../../../assets/Svg/checkmark.svg')}
                 alt='Features split 01'
-                // width={25}
-                // height={25}
               />
               <img
                 className={`terms-checkmark ${
@@ -86,8 +84,6 @@ export default function StepThree({ nextStep, submit, data, setData }) {
                 }`}
                 src={require('../../../assets/Svg/cross.svg')}
                 alt='Features split 01'
-                // width={25}
-                // height={25}
               />
 
               <div className='terms-text'>

@@ -95,11 +95,38 @@
   top:0;
   left: 0;
   padding: 10px 0;
+  margin-top: -2px;
   font-size: 16px;
   color: #fff;
   pointer-events: none;
   transition: .5s;
 }
+// .login-box .user-box select {
+//   option{
+
+//     position: absolute;
+//     top:0;
+//     left: 0;
+//     padding: 10px 0;
+//     margin-top: -2px;
+//     font-size: 16px;
+//     color: #fff;
+//     pointer-events: none;
+//     transition: .5s;
+//   }
+// }
+// .country-option{
+
+//   position: absolute;
+//   top:0;
+//   left: 0;
+//   padding: 10px 0;
+//   margin-top: -2px;
+//   font-size: 16px;
+//   color: #fff;
+//   pointer-events: none;
+//   transition: .5s;
+// }
 
 .login-box .user-box input:focus ~ label,
 .login-box .user-box input:valid ~ label {

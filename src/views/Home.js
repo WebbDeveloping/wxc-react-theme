@@ -12,6 +12,7 @@ import NorthRollOut from '../components/sections/NorthRollOut';
 import HeroScrollButtons from '../components/sections/home/HeroScrollButtons';
 import TextImage from '../components/sections/home/TextImage';
 import LargeImage from '../components/sections/home/LargeImage';
+import ComparisonChart from '../components/sections/charts/ComparisonChart';
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
         <TextImage />
       </div>
       <FeaturesTiles />
+      <ComparisonChart />
       <LargeImage />
       <br />
       <Cta split />

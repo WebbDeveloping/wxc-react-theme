@@ -46,6 +46,12 @@ export default function StepTwo({ nextStep, data, setData }) {
           value={data.country}
           onChange={e => setData({ ...data, country: e.target.value })}
         />
+        {/* <select className='country-option'>
+          <option >1</option>
+          <option>1</option>
+          <option>1</option>
+          <option>1</option>
+        </select> */}
         <label>Country</label>
       </div>
       <div className='user-box'>
