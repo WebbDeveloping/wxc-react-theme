@@ -23,6 +23,7 @@ const Home = () => {
         <TextImage />
       </div>
       <FeaturesTiles />
+      {/* <ComparisonChart /> */}
       <ComparisonChart />
       <LargeImage />
       <br />

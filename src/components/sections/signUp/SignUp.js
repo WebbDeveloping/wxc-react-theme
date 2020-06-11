@@ -6,11 +6,13 @@ import Radio from '../../elements/Radio';
 import FormLabel from '../../elements/FormLabel';
 import Input from '../../elements/Input';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import PageSteps from './PageSteps';
 import StepOne from './StepOne';
 import StepThree from './StepThree';
 import StepTwo from './StepTwo';
 import SubmittedForm from './SubmittedForm';
+import LoginForm from './LoginForm';
 
 export default function SignUp({
   className,
@@ -44,24 +46,24 @@ export default function SignUp({
     termsAccepted: false
   });
   // FORM ONE
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  //FORM TWO
-  const [addressOne, setaddressOne] = useState('');
-  const [addressTwo, setaddressTwo] = useState('');
-  const [zipCode, setzipCode] = useState('');
-  const [country, setcountry] = useState('');
-  const [state, setstate] = useState('');
-  const [city, setcity] = useState('');
-  const [number, setNumber] = useState('');
-  //FORM THREE
-  const [name, setName] = useState('');
-  const [quest, setQuest] = useState('');
-  const [color, setColor] = useState('');
-  const [swollow, setSwollow] = useState('');
-  const [termsAccepted, setTermsAccepted] = useState('');
+  // const [firstName, setFirstName] = useState('');
+  // const [lastName, setLastName] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [password, setPassword] = useState('');
+  // //FORM TWO
+  // const [addressOne, setaddressOne] = useState('');
+  // const [addressTwo, setaddressTwo] = useState('');
+  // const [zipCode, setzipCode] = useState('');
+  // const [country, setcountry] = useState('');
+  // const [state, setstate] = useState('');
+  // const [city, setcity] = useState('');
+  // const [number, setNumber] = useState('');
+  // //FORM THREE
+  // const [name, setName] = useState('');
+  // const [quest, setQuest] = useState('');
+  // const [color, setColor] = useState('');
+  // const [swollow, setSwollow] = useState('');
+  // const [termsAccepted, setTermsAccepted] = useState('');
 
   const outerClasses = classNames(
     'testimonial section',
@@ -71,7 +73,7 @@ export default function SignUp({
     invertColor && 'invert-color',
     className
   );
-
+    // console.log('fn', firstName)
   const innerClasses = classNames(
     'testimonial-inner section-inner',
     topDivider && 'has-top-divider',
@@ -86,32 +88,44 @@ export default function SignUp({
     } else if (e == 4) {
       setStep(4);
     } else if (e == 1) {
+      // register form
       setStep(1);
+    } else if(e === 5){
+      // Login form
+      setStep(5)
     }
   };
-
+// console.log(data)
   const submit = userData => {
     console.log('ud', userData);
-    setData({
-      firstName,
-      lastName,
-      email,
-      password,
-      addressOne,
-      addressTwo,
-      zipCode,
-      country,
-      state,
-      city,
-      number,
-      name,
-      quest,
-      color,
-      swollow
-    });
+    // setData({
+    //   firstName,
+    //   lastName,
+    //   email,
+    //   password,
+    //   addressOne,
+    //   addressTwo,
+    //   zipCode,
+    //   country,
+    //   state,
+    //   city,
+    //   number,
+    //   name,
+    //   quest,
+    //   color,
+    //   swollow
+    // });
     console.log('data', data);
   };
-
+  const registerUser = (e) =>{
+    e.preventDefault();
+    console.log(e);
+    console.log(data.firstName , data.lastName, data.email, data.password);
+    axios.post('localhost:8080/xbanc/index.php', data).then((res)=>{
+      console.log(res)
+    })
+  }
+// console.log(data.firstName)
   const checkStep = e => {
     if (step <= 3) {
       return step == 2 ? (
@@ -127,6 +141,8 @@ export default function SignUp({
     } else if (step == 4) {
       //Thank You Page
       return <SubmittedForm nextStep={nextStep} />;
+    } else if(step == 5){
+      return <LoginForm nextStep={nextStep} setData={setData} data={data} register={registerUser} />
     }
   };
 
@@ -143,7 +159,7 @@ export default function SignUp({
             {/* Form BOX */}
             <div className=' lg-w-100  bg-color-primary'>
               {step == 1 ? (
-                <StepOne nextStep={nextStep} setData={setData} data={data} />
+                <StepOne nextStep={nextStep} setData={setData} data={data} register={registerUser} />
               ) : (
                 checkStep()
               )}
@@ -178,30 +194,18 @@ export default function SignUp({
                   </p>
                   <p className='text-color-secondary'>- Joe Dirt</p>
                 </div>
-                {/* <div className='bg-white text-color-primary m-16 p-16'>
-                  <h4 className='text-color-primary'>
-                    “A hard-to-beat combo: free checking and high-yield savings”
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sint recusandae, natus rerum deleniti nihil doloremque
-                    minima consequuntur assumenda at et optio illo, quibusdam ab
-                    in molestias porro aperiam quasi aut.
-                  </p>
-                </div> */}
               </div>
             </div>
           </div>
         </div>
         <hr />
-        <div className='container fs-16'>
+        <div className='container fs-14'>
           <p>
             All rights Reserved by XBanc, LLC 2020. Lorem ipsum dolor sit amet
             consectetur adipisicing elit. Libero, ab. Officia labore in
             molestiae qui quaerat id magni minus cum quisquam excepturi adipisci
             doloribus neque, odio iusto corrupti? Optio, nisi?
           </p>
-          <br />
           <p>
             See the xBanc Account Agreement on the web. or in our iOSopens in
             new window and Androidopens in new window apps for details on
@@ -210,7 +214,6 @@ export default function SignUp({
             move per transaction, how many times, and how long it takes for
             funds to be available.
           </p>
-          <br />
           <p>
             ^No Fee Overdraft requirements: No Fee Overdraft gives you
             flexibility to overdraw your account up to $50 on any transaction
@@ -221,22 +224,19 @@ export default function SignUp({
             app.
           </p>
           <p>
-            ^No Fee Overdraft requirements: No Fee Overdraft gives you
-            flexibility to overdraw your account up to $50 on any transaction
-            made with your Varo Visa Debit Card. To qualify: Make at least five
-            qualifying debit card purchases in each calendar month, AND Receive
-            total payroll or government direct deposits of $1,000 or more in the
-            same calendar month. Enroll by turning on No Fee Overdraft in the
-            app.
+            ^Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+            aspernatur harum nisi, veniam eligendi aliquam alias? Facere, illum?
+            Laudantium beatae ducimus quam, ad nesciunt ab aspernatur sequi quas
+            nulla excepturi.
           </p>
           <p>
-            ^No Fee Overdraft requirements: No Fee Overdraft gives you
-            flexibility to overdraw your account up to $50 on any transaction
-            made with your Varo Visa Debit Card. To qualify: Make at least five
-            qualifying debit card purchases in each calendar month, AND Receive
-            total payroll or government direct deposits of $1,000 or more in the
-            same calendar month. Enroll by turning on No Fee Overdraft in the
-            app.
+            ^Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            maiores earum eaque corrupti. Possimus voluptatum officia
+            architecto, placeat quas consequuntur nisi cum blanditiis iure minus
+            vero. Quos consectetur quaerat tempora! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Impedit asperiores sapiente
+            repudiandae error modi ut amet earum praesentium saepe quos, ab
+            tempora eligendi illum libero. Qui eaque in architecto odio!
           </p>
         </div>
       </div>

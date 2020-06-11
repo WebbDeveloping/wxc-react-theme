@@ -162,7 +162,7 @@ export default function ComparisonChart() {
             tag='a'
             color='secondary'
             wideMobile
-            href='sign-up'
+            href='/sign-up'
           >
             Read More
           </Button>

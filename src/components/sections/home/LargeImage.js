@@ -35,16 +35,10 @@ export default function LargeImage({
       <br />
       <TextImage />
       <FeaturesTiles /> */}
-      <br className='sm-hide' />
-      <br className='sm-hide' />
-      <br className='sm-hide' />
-      <br className='sm-hide' />
-      <br className='sm-hide' />
-      <br className='sm-hide' />
-      <br className='sm-hide' />
+
           {/* TODO: MAYBE ADD CONTAINER CLASS LINE BELOW */}
       <div className='lg-pl-32 lg-pr-32'>
-        <div className='img-absolute relative'>
+        {/* <div className='img-absolute relative'>
           <div className='relative reveal-from-bottom sm-hide '>
             <img
               src={require('./../../../assets/images/internet-img.jpg')}
@@ -71,7 +65,6 @@ export default function LargeImage({
               dignissimos quod obcaecati. Neque.
             </p>
           </div>
-          {/* //small board */}
           <div className='board p-32 box-shadow lg-hide reveal-from-top'>
             <h1>Heading</h1>
             <p>
@@ -89,8 +82,9 @@ export default function LargeImage({
               dignissimos quod obcaecati. Neque.
             </p>
           </div>
-          {/* end small board */}
-        </div>
+
+        </div> */}
+        
         <IconTiles />
         <br className='sm-hide' />
         <br className='sm-hide' />

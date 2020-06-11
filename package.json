@@ -2,7 +2,7 @@
   "name": "react-scss-template",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:6464",
+  "proxy": "http://localhost:8080",
   "main": "server/app.js",
   "nodemonConfig": {
     "ext": "js,sql",

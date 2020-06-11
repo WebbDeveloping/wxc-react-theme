@@ -97,7 +97,7 @@ export default function StepTwo({ nextStep, data, setData }) {
         <span></span>
         Submit
       </a> */}
-      <div classNamae='login-button'>
+      <div className='login-button'>
         <div className='flex-row-around'>
           <div className='pr-8'>
             <Button
