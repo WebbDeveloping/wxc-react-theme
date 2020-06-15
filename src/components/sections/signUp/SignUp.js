@@ -8,11 +8,12 @@ import Input from '../../elements/Input';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import PageSteps from './PageSteps';
-import StepOne from './StepOne';
+import RegisterForm from './RegisterForm';
 import StepThree from './StepThree';
 import StepTwo from './StepTwo';
 import SubmittedForm from './SubmittedForm';
 import LoginForm from './LoginForm';
+import ConfirmEmailForm from './ConfirmEmailForm';
 
 export default function SignUp({
   className,
@@ -93,6 +94,8 @@ export default function SignUp({
     } else if(e === 5){
       // Login form
       setStep(5)
+    } else if(e === 6){
+      setStep(6)
     }
   };
 // console.log(data)
@@ -143,6 +146,9 @@ export default function SignUp({
       return <SubmittedForm nextStep={nextStep} />;
     } else if(step == 5){
       return <LoginForm nextStep={nextStep} setData={setData} data={data} register={registerUser} />
+    } else if(step == 6){
+      return <ConfirmEmailForm nextStep={nextStep} />
+      
     }
   };
 
@@ -159,7 +165,7 @@ export default function SignUp({
             {/* Form BOX */}
             <div className=' lg-w-100  bg-color-primary'>
               {step == 1 ? (
-                <StepOne nextStep={nextStep} setData={setData} data={data} register={registerUser} />
+                <RegisterForm nextStep={nextStep} setData={setData} data={data} register={registerUser} />
               ) : (
                 checkStep()
               )}

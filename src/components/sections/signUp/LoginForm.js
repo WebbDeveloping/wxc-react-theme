@@ -16,11 +16,12 @@ export default function LoginForm({ nextStep, data, setData, register }) {
     }
   };
   const handleSubmit = e =>{
-    // const url = 'http://localhost:8080/xbanc/api/create.php'
-    // // console.log(formData)
-    // axios.post(url, {'first_name': data.firstName, 'last_name': data.lastName, 'email': data.email, 'password': data.password}).then(res =>{
-    //   console.log(res.data)
-    // }).catch(err =>console.log(err));
+      console.log('submitted');
+    const url = `http://localhost:8080/xbanc/api/getSingleUser.php?email=${data.email}`;
+    // console.log(formData)
+    axios.get(url, {email: data.email}).then(res =>{
+      console.log('data',res.data)
+    }).catch(err =>console.log(err));
     nextStep(2);
 
   }
@@ -65,7 +66,7 @@ export default function LoginForm({ nextStep, data, setData, register }) {
             value={data}
             onClick={(e) => handleSubmit(e.target.value)}
           >
-            Get Started
+            Login
           </Button>
         </div>
       </div>

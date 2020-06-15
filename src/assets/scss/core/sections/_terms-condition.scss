@@ -178,16 +178,16 @@
 //               0 0 50px get-color(secondary, 2),
 //               0 0 100px get-color(secondary, 2);
 // }
-.login-button:hover {
-  background: get-color(secondary, 2);
-  // background: get-color(secondary, 2);
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px get-color(secondary, 2),
-              0 0 25px get-color(secondary, 2),
-              0 0 50px get-color(secondary, 2),
-              0 0 100px get-color(secondary, 2);
-}
+// .login-button:hover {
+//   background: get-color(secondary, 2);
+//   // background: get-color(secondary, 2);
+//   color: #fff;
+//   border-radius: 5px;
+//   box-shadow: 0 0 5px get-color(secondary, 2),
+//               0 0 25px get-color(secondary, 2),
+//               0 0 50px get-color(secondary, 2),
+//               0 0 100px get-color(secondary, 2);
+// }
 
 .login-box a span {
   position: absolute;

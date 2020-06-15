@@ -4,8 +4,9 @@ import Button from '../../elements/Button';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
-// export default function StepOne({ nextStep, submit, handleForm, setFirstName, setLastName, setEmail, setPassword }) {
-export default function StepOne({ nextStep, data, setData, register }) {
+// export default function RegisterForm({ nextStep, submit, handleForm, setFirstName, setLastName, setEmail, setPassword }) {
+export default function RegisterForm({ nextStep, data, setData, register }) {
+  const [error, setError] = useState('')
   // const checkPassword = (wtf) => {
   //   if (data.password === data.confirmPassword) {
   //     // handleClick(data);
@@ -26,9 +27,15 @@ export default function StepOne({ nextStep, data, setData, register }) {
     const url = 'http://localhost:8080/xbanc/api/create.php'
     // console.log(formData)
     axios.post(url, {'first_name': data.firstName, 'last_name': data.lastName, 'email': data.email, 'password': data.password}).then(res =>{
-      console.log(res.data)
-      nextStep(2)
-    }).catch(err =>console.log(err));
+      // console.log(res.data)
+      if(!res.data.Message){
+        // console.log('Something broke')
+        setError('* This Email Already Has An Account.')
+      } else {
+
+        nextStep(6)
+      }
+    }).catch(err =>console.log('err', err));
     // axios.post({
     //   method: 'POST',
     //   url: `${url}`,
@@ -39,7 +46,7 @@ export default function StepOne({ nextStep, data, setData, register }) {
     // })
 
   }
-
+  console.log(error);
   // const handleClick = async data => {
 
   //   // const emailValidator = email.match(
@@ -93,7 +100,8 @@ export default function StepOne({ nextStep, data, setData, register }) {
             value={data.email}
             onChange={e => setData({ ...data, email: e.target.value })}
           />
-          <label>Email</label>
+          <label className={ error ? 'd-none' : ''}>Email</label>
+          <label className='text-color-error'>{error}</label>
         </div>
         <div className='user-box'>
           <input
@@ -120,7 +128,7 @@ export default function StepOne({ nextStep, data, setData, register }) {
         </div>
         <div className='flex-row m-8 fs-16 '>
           <p className=''>Already an XPay customer?</p>
-          <div className=' button-div mt-0 p-0 ml-16' onClick={()=>nextStep(5)}><u>Click Here!</u></div>
+          <div className=' button-link mt-0 p-0 ml-16' onClick={()=>nextStep(5)}><u>Click Here!</u></div>
         </div>
         {/* <a href='#'>
           <span></span>
