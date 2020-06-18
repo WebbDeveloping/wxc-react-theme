@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../../utils/SectionProps';
-import SectionHeader from '.././partials/SectionHeader';
 import Image from '../../elements/Image';
 
 const propTypes = {
@@ -41,10 +40,6 @@ const ImageGrid = ({
   // TODO: MAKE THIS NO WRAP on large, COLUMN SMALL
   const tilesClasses = classNames('tiles-wrap', pushLeft && 'push-left');
 
-  const sectionHeader = {
-    title: 'XPAY IS COMING',
-    paragraph: 'Get Ready, Act Now!'
-  };
 
   return (
     <section {...props} className={outerClasses}>
@@ -60,8 +55,8 @@ const ImageGrid = ({
                 <Image
                   src={require('../../../assets/images/wxc/merch/merch_1.png')}
                   alt='Features tile icon 01'
-                  width={'auto'}
-                  height={'100%'}
+                  // width={'auto'}
+                  // height={'100%'}
                 />
                 <br />
                 <p>Meet your new chekcout</p>
@@ -73,8 +68,8 @@ const ImageGrid = ({
                 <Image
                   src={require('../../../assets/images/wxc/merch/merch_2.png')}
                   alt='Features tile icon 01'
-                  width={'auto'}
-                  height={'100%'}
+                  // width={'auto'}
+                  // height={'100%'}
                 />
                 <br />
                 <p>Meet your new product Purchase Codes.</p>
@@ -89,8 +84,8 @@ const ImageGrid = ({
                 <Image
                   src={require('../../../assets/images/wxc/merch/merch_3.png')}
                   alt='Features tile icon 01'
-                  width={'auto'}
-                  height={'100%'}
+                  // width={'auto'}
+                  // height={'100%'}
                 />
                 <br />
                 <p>Your POS can now be anywhere!</p>
@@ -105,8 +100,8 @@ const ImageGrid = ({
                 <Image
                   src={require('../../../assets/images/wxc/merch/merch_4.png')}
                   alt='Features tile icon 01'
-                  width={'auto'}
-                  height={'100%'}
+                  // width={'auto'}
+                  // height={'100%'}
                 />
                 <br />
                 <p>
@@ -123,8 +118,8 @@ const ImageGrid = ({
                 <Image
                   src={require('../../../assets/images/wxc/merch/merch_5.png')}
                   alt='Features tile icon 01'
-                  width={'auto'}
-                  height={'100%'}
+                  // width={'auto'}
+                  // height={'100%'}
                 />
                 <br />
                 <p>Your social media posts can now be a POS.</p>
@@ -139,8 +134,8 @@ const ImageGrid = ({
                 <Image
                   src={require('../../../assets/images/wxc/merch/merch_6.png')}
                   alt='Features tile icon 01'
-                  width={'auto'}
-                  height={'100%'}
+                  // width={'auto'}
+                  // height={'100%'}
                 />
                 <br />
                 <p>Don't just hand out your business card, hand out a POS.</p>
@@ -155,8 +150,8 @@ const ImageGrid = ({
                 <Image
                   src={require('../../../assets/images/wxc/merch/merch_7.png')}
                   alt='Features tile icon 01'
-                  width={'auto'}
-                  height={'100%'}
+                  // width={'auto'}
+                  // height={'100%'}
                 />
                 <br />
                 <p>Put a POS call-to-action on all your advertising.</p>
@@ -171,8 +166,8 @@ const ImageGrid = ({
                 <Image
                   src={require('../../../assets/images/wxc/merch/merch_8.png')}
                   alt='Features tile icon 01'
-                  width={'auto'}
-                  height={'100%'}
+                  // width={'auto'}
+                  // height={'100%'}
                 />
                 <br />
                 <p>You can even turn the TV into your POS.</p>
@@ -187,8 +182,8 @@ const ImageGrid = ({
                 <Image
                   src={require('../../../assets/images/wxc/merch/merch_9.png')}
                   alt='Features tile icon 01'
-                  width={'auto'}
-                  height={'100%'}
+                  // width={'auto'}
+                  // height={'100%'}
                 />
                 <br />
                 <p>Let your customers purchase right from your catalog.</p>
@@ -203,8 +198,8 @@ const ImageGrid = ({
                 <Image
                   src={require('../../../assets/images/wxc/merch/merch_10.png')}
                   alt='Features tile icon 01'
-                  width={'auto'}
-                  height={'100%'}
+                  // width={'auto'}
+                  // height={'100%'}
                 />
                 <br />
                 <p>Make that sales letter even more powerful with a POS.</p>
@@ -219,8 +214,8 @@ const ImageGrid = ({
                 <Image
                   src={require('../../../assets/images/wxc/merch/merch_11.png')}
                   alt='Features tile icon 01'
-                  width={'auto'}
-                  height={'100%'}
+                  // width={'auto'}
+                  // height={'100%'}
                 />
                 <br />
                 <p>It's now official, size doesn't matter.</p>
@@ -235,8 +230,8 @@ const ImageGrid = ({
                 <Image
                   src={require('../../../assets/images/wxc/merch/merch_12.png')}
                   alt='Features tile icon 01'
-                  width={'100%'}
-                  height={'auto'}
+                  // width={'100%'}
+                  // height={'auto'}
                 />
                 <br />
                 <p>Your POS anywhere, limited only by your imagination!</p>

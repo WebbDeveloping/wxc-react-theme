@@ -37,8 +37,6 @@ const XpayIsComing = ({
     bottomDivider && 'has-bottom-divider'
   );
 
-  // TODO: MAKE THIS NO WRAP on large, COLUMN SMALL
-  const tilesClasses = classNames('tiles-wrap', pushLeft && 'push-left');
 
   const sectionHeader = {
     title: 'XPAY IS COMING',

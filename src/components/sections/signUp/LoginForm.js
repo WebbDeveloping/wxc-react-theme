@@ -1,30 +1,22 @@
 import React, { useState } from 'react';
-import Input from '../../elements/Input';
 import Button from '../../elements/Button';
-import {Link} from 'react-router-dom';
 import axios from 'axios';
 
-// export default function LoginForm({ nextStep, submit, handleForm, setFirstName, setLastName, setEmail, setPassword }) {
-export default function LoginForm({ nextStep, data, setData, register }) {
-  const checkPassword = (wtf) => {
-    if (data.password === data.confirmPassword) {
-      // handleClick(data);
-      handleSubmit(data);
-      nextStep(2);
-    } else {
-      return 'Sorry Passwords do not match.';
-    }
-  };
+export default function LoginForm({ nextStep, data, setData }) {
+    const [authError, setAuthError] = useState(false);
+
   const handleSubmit = e =>{
-      console.log('submitted');
-    const url = `http://localhost:8080/xbanc/api/getSingleUser.php?email=${data.email}`;
-    // console.log(formData)
-    axios.get(url, {email: data.email}).then(res =>{
-      console.log('data',res.data)
+    const url = `http://localhost:8080/xbanc/api/login.php`;
+    axios.post(url, {"email": data.email, "password": data.password}).then(res =>{
+      if(!res.data.msg){
+          setAuthError(true)
+      } else {
+          nextStep(7)
+      }
     }).catch(err =>console.log(err));
-    nextStep(2);
 
   }
+
   return (
     <div className='login-box'>
       <h2>Login to XBanc</h2>
@@ -51,6 +43,9 @@ export default function LoginForm({ nextStep, data, setData, register }) {
           />
           <label>Password</label>
         </div>
+        <div className={`flex-row m-8 fs-16 ${authError ? '' : 'd-none'}`}>
+          <p className='text-color-error'>* Email or Pasword is incorrect</p>
+        </div>
         <div className='flex-row m-8 fs-16 '>
           <p className=''>Need an account?</p>
           <div className=' button-link mt-0 p-0 ml-16' onClick={()=>nextStep(1)}><u >Get Started!</u></div>
@@ -58,11 +53,6 @@ export default function LoginForm({ nextStep, data, setData, register }) {
         <div className=''>
           <Button
           color='secondary'
-            // disabled={
-            //   data.password === data.confirmPassword && data.password != ''
-            //     ? false
-            //     : true
-            // }
             value={data}
             onClick={(e) => handleSubmit(e.target.value)}
           >

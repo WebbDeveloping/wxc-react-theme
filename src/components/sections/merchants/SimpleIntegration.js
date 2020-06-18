@@ -38,8 +38,6 @@ const SimpleIntegration = ({
     bottomDivider && 'has-bottom-divider'
   );
 
-  const tilesClasses = classNames('tiles-wrap', pushLeft && 'push-left');
-
   const sectionHeader = {
     title: 'Integration is Easy',
     paragraph: ''

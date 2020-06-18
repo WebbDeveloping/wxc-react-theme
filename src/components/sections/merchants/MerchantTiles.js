@@ -1,13 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../../utils/SectionProps';
-import ButtonGroup from '../../elements/ButtonGroup';
-import Button from '../../elements/Button';
-import { Link } from 'react-router-dom';
 import SectionHeader from '../partials/SectionHeader';
 
-// import MerchantTiles from './MerchantTiles';
-import FunnelTiles from './FunnelTiles';
 import TileSection from './TileSection';
 
 const propTypes = {
@@ -28,26 +23,16 @@ const MerchantTiles = ({
   invertColor,
   ...props
 }) => {
-  const [videoModalActive, setVideomodalactive] = useState(false);
   const {
-    tileOneHead,
-    tileTwoHead,
-    tileThreeHead,
-    tileOneText,
-    tileTwoText,
-    tileThreeText,
+    tileonehead,
+    tiletwohead,
+    tilethreehead,
+    tilethreetext,
+    tiletwotext,
+    tileonetext,
     title,
     paragraph
   } = props;
-  const openModal = e => {
-    e.preventDefault();
-    setVideomodalactive(true);
-  };
-
-  const closeModal = e => {
-    e.preventDefault();
-    setVideomodalactive(false);
-  };
 
   const sectionHeader = {
     title: title,
@@ -77,12 +62,12 @@ const MerchantTiles = ({
         </div>
       </div>
       <TileSection
-        tileOneHead={tileOneHead}
-        tileTwoHead={tileTwoHead}
-        tileThreeHead={tileThreeHead}
-        tileOneText={tileOneText}
-        tileTwoText={tileTwoText}
-        tileThreeText={tileThreeText}
+        tileonehead={tileonehead}
+        tiletwohead={tiletwohead}
+        tilethreehead={tilethreehead}
+        tilethreetext={tilethreetext}
+        tiletwotext={tiletwotext}
+        tileonetext={tileonetext}
       />
     </section>
   );

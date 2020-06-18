@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
-import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
-import Image from '../elements/Image';
-import Modal from '../elements/Modal';
 import HeroCard from './home/HaroCard';
-import { Link } from 'react-router-dom';
 import HeroScrollButtons from './home/HeroScrollButtons';
 import SmallHeroScroll from './home/SmallHeroScroll';
 const data = {
@@ -83,20 +79,20 @@ const Hero = ({
   invertColor,
   ...props
 }) => {
-  const [animate, setAnimate] = useState(false);
-  const handleClick = () => setAnimate(!animate);
-  const [dataList, setDataList] = useState(data.properties);
+  // const [animate, setAnimate] = useState(false);
+  // const handleClick = () => setAnimate(!animate);
+  // const [dataList, setDataList] = useState(data.properties);
   const [activeHeroContent, setHeroContent] = useState(data.properties[0]);
 
   const buttonClick = e => {
 
-    if (e == 1) {
+    if (e === 1) {
       setHeroContent(data.properties[0]);
-    } else if (e == 2) {
+    } else if (e === 2) {
       setHeroContent(data.properties[1]);
-    } else if (e == 3) {
+    } else if (e === 3) {
       setHeroContent(data.properties[2]);
-    } else if (e == 4) {
+    } else if (e === 4) {
       setHeroContent(data.properties[3]);
     }
   };
@@ -109,11 +105,6 @@ const Hero = ({
     className
   );
 
-  const innerClasses = classNames(
-    'hero-inner section-inner',
-    topDivider && 'has-top-divider',
-    bottomDivider && 'has-bottom-divider flex-row'
-  );
 
   return (
     <section {...props} className={outerClasses}>

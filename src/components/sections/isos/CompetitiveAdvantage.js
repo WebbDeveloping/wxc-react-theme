@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../../utils/SectionProps';
-import { Link } from 'react-router-dom';
 
 const propTypes = {
   ...SectionProps.types
@@ -21,17 +20,8 @@ const CompetitiveAdvantage = ({
   invertColor,
   ...props
 }) => {
-  const [videoModalActive, setVideomodalactive] = useState(false);
 
-  const openModal = e => {
-    e.preventDefault();
-    setVideomodalactive(true);
-  };
 
-  const closeModal = e => {
-    e.preventDefault();
-    setVideomodalactive(false);
-  };
 
   const outerClasses = classNames(
     'hero section center-content',

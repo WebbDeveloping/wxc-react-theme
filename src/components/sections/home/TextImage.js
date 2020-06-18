@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import { SectionProps } from '../../../utils/SectionProps';
 import Button from '../../elements/Button';
 import ButtonGroup from '../../elements/ButtonGroup';
 import Image from '../../elements/Image';
@@ -24,11 +23,11 @@ export default function TextImage({
     className
   );
 
-  const innerClasses = classNames(
-    'hero-inner section-inner',
-    topDivider && 'has-top-divider',
-    bottomDivider && 'has-bottom-divider flex-row'
-  );
+  // const innerClasses = classNames(
+  //   'hero-inner section-inner',
+  //   topDivider && 'has-top-divider',
+  //   bottomDivider && 'has-bottom-divider flex-row'
+  // );
   return (
     <section {...props} className={outerClasses}>
     {/* TODO: MAYBE ADD CONTAINER CLASS LINE BELOW */}

@@ -1,70 +1,23 @@
 import React, { useState } from 'react';
-import Input from '../../elements/Input';
 import Button from '../../elements/Button';
-import {Link} from 'react-router-dom';
 import axios from 'axios';
 
-// export default function RegisterForm({ nextStep, submit, handleForm, setFirstName, setLastName, setEmail, setPassword }) {
-export default function RegisterForm({ nextStep, data, setData, register }) {
+export default function RegisterForm({ nextStep, data, setData, setUserId }) {
   const [error, setError] = useState('')
-  // const checkPassword = (wtf) => {
-  //   if (data.password === data.confirmPassword) {
-  //     // handleClick(data);
-  //     handleSubmit(data);
-  //     // nextStep(2);
-  //   } else {
-  //     return 'Sorry Passwords do not match.';
-  //   }
-  // };
   const handleSubmit = e =>{
-    // console.log(data.firstName);
-    // // e.preventDefault();
-    // let formData = new FormData();
-    // formData.append('first_name', data.firstName)
-    // formData.append('last_name', data.lasttName)
-    // formData.append('email', data.email)
-    // formData.append('password', data.password)
-    const url = 'http://localhost:8080/xbanc/api/create.php'
-    // console.log(formData)
+    const url = 'http://localhost:8080/xbanc/api/register.php'
     axios.post(url, {'first_name': data.firstName, 'last_name': data.lastName, 'email': data.email, 'password': data.password}).then(res =>{
-      // console.log(res.data)
-      if(!res.data.Message){
-        // console.log('Something broke')
+      console.log(res.data)
+      if(res.data.user_id){
+        setUserId(res.data.user_id);
+      }
+      if(res.data.msg === false){
         setError('* This Email Already Has An Account.')
-      } else {
-
+      } else { 
         nextStep(6)
       }
     }).catch(err =>console.log('err', err));
-    // axios.post({
-    //   method: 'POST',
-    //   url: `${url}`,
-    //   headers: { 'Content-Type': 'application/json' },
-    //   data: formData
-    // }).then(res =>{
-    //   console.log(res.data).catch(err =>console.log(err));
-    // })
-
   }
-  console.log(error);
-  // const handleClick = async data => {
-
-  //   // const emailValidator = email.match(
-  //   //   /^(?:(?:[\w`~!#$%^&*\-=+;:{}'|,?\/]+(?:(?:\.(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)*"|[\w`~!#$%^&*\-=+;:{}'|,?\/]+))*\.[\w`~!#$%^&*\-=+;:{}'|,?\/]+)?)|(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)+"))@(?:[a-zA-Z\d\-]+(?:\.[a-zA-Z\d\-]+)*|\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\])$/gm
-  //   // );
-  //   try {
-  //     // console.log('send', data);
-  //     // const regRes = await axios.post(`localhost:8080/xbanc/index.php`, data);
-  //     // console.log(regRes);
-  //     // const updateUser = await this.props.updateUser(regRes.data);
-  //     // this.props.setRegister(false);
-  //     // this.props.history.push("/dashboard");
-  //   } catch (err) {
-  //     console.log(err);
-  //     // this.setState({ errMessage: err.response.data });
-  //   }
-  // };
-  // console.log(data)
   return (
     <div className='login-box'>
       <h2>Apply for an XBanc Account today.</h2>
@@ -130,27 +83,14 @@ export default function RegisterForm({ nextStep, data, setData, register }) {
           <p className=''>Already an XPay customer?</p>
           <div className=' button-link mt-0 p-0 ml-16' onClick={()=>nextStep(5)}><u>Click Here!</u></div>
         </div>
-        {/* <a href='#'>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Submit
-        </a> */}
         <div className=''>
           <Button
             disabled={
-              data.password === data.confirmPassword && data.password != ''
+              data.password === data.confirmPassword && data.password !== ''
                 ? false
                 : true
             }
-            // value={'hello'}
-            // type='submit'
-            // tag='button'
             color='secondary'
-            // value='registerUser'
-            // wideMobile
-            // onClick={() => checkPassword()}
             value={data}
             onClick={(e) => handleSubmit(e.target.value)}
           >

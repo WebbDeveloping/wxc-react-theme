@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ButtonGroup from '../../elements/ButtonGroup';
 import Button from '../../elements/Button';
 import Image from '../../elements/Image';
 
 export default function HaroCard(props) {
-  const { data, animateRight, animateLeft } = props;
+  const { data, animateRight } = props;
   // console.log(data);
   return (
     <div className='flex-row hero-bg-img sm-hide'>
@@ -44,7 +44,7 @@ export default function HaroCard(props) {
           >
             <g data-name='Layer 2' fill='#00376D'>
               <g id='OBJECTS'>
-                <g class='homeHero-1-1'>
+                <g className='homeHero-1-1'>
                   <path d='M0,0V228.66c30.42-5.57,58.38-17.85,78.08-41.44,17-20.35,25.31-46.42,36.17-70.67s26.17-48.66,50.51-59c34.37-14.56,76.73,3.09,110-13.78,17.23-8.73,28.1-25,33.44-43.8Z'></path>
                 </g>
               </g>

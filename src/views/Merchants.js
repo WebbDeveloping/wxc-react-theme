@@ -14,16 +14,16 @@ const Merchants = () => {
         className='illustration-section-01'
         title={'Show You Care'}
         paragraph={'By providing your customers with a private way to pay.'}
-        tileOneHead={'ACCEPT XPAY ONLINE'}
-        tileOneText={
+        tileonehead={'ACCEPT XPAY ONLINE'}
+        tileonetext={
           'Give your online customers a greatly improved check-out experience that is faster, easier, private and fraud-proof.'
         }
-        tileTwoHead={'ACCEPT XPAY IN-PERSON'}
-        tileTwoText={
+        tiletwohead={'ACCEPT XPAY IN-PERSON'}
+        tiletwotext={
           'Provide a fraud-free experience in your establishment that is easier to use and gives customers increased privacy.'
         }
-        tileThreeHead={'ACCEPT XPAY ON-PHONE'}
-        tileThreeText={
+        tilethreehead={'ACCEPT XPAY ON-PHONE'}
+        tilethreetext={
           "Increase privacy and security while taking payments over the phone where the customer doesn't have to verbally read card information."
         }
       />

@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import classNames from 'classnames';
-import { SectionProps } from '../../../utils/SectionProps';
 
 export default function HeroScrollButtons({ click, data }) {
   const [activeTab1, setActive1] = useState('active-btn');
@@ -8,28 +6,28 @@ export default function HeroScrollButtons({ click, data }) {
   const [activeTab3, setActive3] = useState('');
   const [activeTab4, setActive4] = useState('');
   const setTab = e => {
-    if (e == 1) {
+    if (e === 1) {
       setActive1('active-btn');
       setActive2('');
       setActive3('');
       setActive4('');
       click('1');
     }
-    if (e == 2) {
+    if (e === 2) {
       setActive1('');
       setActive2('active-btn');
       setActive3('');
       setActive4('');
       click('2');
     }
-    if (e == 3) {
+    if (e === 3) {
       setActive1('');
       setActive2('');
       setActive3('active-btn');
       setActive4('');
       click('3');
     }
-    if (e == 4) {
+    if (e === 4) {
       setActive1('');
       setActive2('');
       setActive3('');

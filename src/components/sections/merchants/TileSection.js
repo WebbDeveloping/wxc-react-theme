@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../../utils/SectionProps';
-import SectionHeader from '../partials/SectionHeader';
 import Image from '../../elements/Image';
 // import '../../assets/css/icons.css';
 
@@ -23,14 +22,6 @@ const TileSection = ({
   pushLeft,
   ...props
 }) => {
-  const outerClasses = classNames(
-    'features-tiles section',
-    topOuterDivider && 'has-top-divider',
-    bottomOuterDivider && 'has-bottom-divider',
-    hasBgColor && 'has-bg-color',
-    invertColor && 'invert-color',
-    className
-  );
 
   const innerClasses = classNames(
     'features-tiles-inner section-inner pt-0',
@@ -38,22 +29,13 @@ const TileSection = ({
     bottomDivider && 'has-bottom-divider'
   );
 
-  const tilesClasses = classNames(
-    'tiles-wrap center-content',
-    pushLeft && 'push-left'
-  );
-
-  const sectionHeader = {
-    title: 'Show You Care',
-    paragraph: 'Providing your customers with a private way to pay.'
-  };
   const {
-    tileOneHead,
-    tileTwoHead,
-    tileThreeHead,
-    tileOneText,
-    tileTwoText,
-    tileThreeText
+    tileonehead,
+    tiletwohead,
+    tilethreehead,
+    tileonetext,
+    tiletwotext,
+    tilethreetext
   } = props;
 
   return (
@@ -76,8 +58,8 @@ const TileSection = ({
                 </div>
 
                 <div className='features-tiles-item-content  flex-col-center center-content'>
-                  <h4 className='mt-0 mb-8'>{tileOneHead}</h4>
-                  <p className='m-0 text-sm'>{tileOneText}</p>
+                  <h4 className='mt-0 mb-8'>{tileonehead}</h4>
+                  <p className='m-0 text-sm'>{tileonetext}</p>
                 </div>
               </div>
             </div>
@@ -98,8 +80,8 @@ const TileSection = ({
                   </div>
                 </div>
                 <div className='features-tiles-item-content flex-col-center center-content'>
-                  <h4 className='mt-0 mb-8'>{tileTwoHead}</h4>
-                  <p className='m-0 text-sm'>{tileTwoText}</p>
+                  <h4 className='mt-0 mb-8'>{tiletwohead}</h4>
+                  <p className='m-0 text-sm'>{tiletwotext}</p>
                 </div>
               </div>
             </div>
@@ -120,8 +102,8 @@ const TileSection = ({
                   </div>
                 </div>
                 <div className='features-tiles-item-content flex-col-center center-content'>
-                  <h4 className='mt-0 mb-8'>{tileThreeHead}</h4>
-                  <p className='m-0 text-sm'>{tileThreeText}</p>
+                  <h4 className='mt-0 mb-8'>{tilethreehead}</h4>
+                  <p className='m-0 text-sm'>{tilethreetext}</p>
                 </div>
               </div>
             </div>

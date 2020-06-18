@@ -1,19 +1,16 @@
-import React, { useState } from 'react';
-import classNames from 'classnames';
-import { SectionProps } from '../../../utils/SectionProps';
-import Button from '../../elements/Button';
+import React from 'react';
 import Image from '../../elements/Image';
 
+// let hideRarr = '';
+// let hideLarr = '';
 export default function SmallHeroScroll({ click, data }) {
-  let hideRarr = '';
-  let hideLarr = '';
-  if (data['index'] == 0) {
-    hideRarr = 'sm-hide';
-  }
-  if (data['index'] == 3) {
-    hideRarr = 'sm-hide';
-  }
-  // console.log(data);
+  // if (data['index'] === 0) {
+  //   hideRarr = 'sm-hide';
+  // }
+  // if (data['index'] === 3) {
+  //   hideLarr = 'sm-hide';
+  //   // hideRarr = 'sm-hide';
+  // }
   return (
     <div className='container  w-100 lg-hide box-container'>
       <div className=' flex-row-around box'>
@@ -32,11 +29,9 @@ export default function SmallHeroScroll({ click, data }) {
         </div>
         <div className='sm-img-absolute h-100 w-100 bg-color-light-2'>
           <Image
-            // className={`sm-w-100 sm-h-100 lg-mr-32`}
-            // src={require(`../../../assets/Svg/${data['img-path']}`)}
             src={require(`../../../assets/images/networking.jpg`)}
-            height={'100%'}
-            width={'100%'}
+            // height={'100%'}
+            // width={'100%'}
           />
         </div>
       </div>

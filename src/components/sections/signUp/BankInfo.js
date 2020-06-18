@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
-import Input from '../../elements/Input';
 import Button from '../../elements/Button';
-import { Link } from 'react-router-dom';
 import LegalAgreement from './LegalAgreement';
-import Image from '../../elements/Image';
+import axios from 'axios';
 
-export default function StepThree({ nextStep, submit, data, setData }) {
-  const SubmitFinalForm = () => {
-    submit(data);
-    nextStep(4);
-  };
+export default function StepThree({ nextStep, submit, data, setData, userId }) {
+  // const [error, setError] = useState('')
+  const handleSubmit = e =>{
+    const url = 'http://localhost:8080/xbanc/api/bankInfo.php'
+    axios.post(url, {'user_id': userId, 'bank_name': data.bank_name, 'cc_num': data.cc_num, 'account_num': data.account_num, 'routing_num': data.routing_num, "terms_accepted": data.termsAccepted}).then(res =>{
+      console.log(res.data)
+      if(res.data.msg === false){
+        // setError('* This Email Already Has An Account.')
+        console.log('failure');
+      } else {
+        nextStep(4)
+      }
+    }).catch(err =>console.log('err', err));
+  }
   const [hideForm, setHideForm] = useState('');
   const [hideContract, setHideContract] = useState('lg-hide');
 
@@ -28,14 +35,14 @@ export default function StepThree({ nextStep, submit, data, setData }) {
   };
   return (
     <div className='login-box'>
-      <form className={`center-content  ${hideForm}`}>
+      <div className={`center-content  ${hideForm}`}>
         <h3>Connect Your Bank</h3>
         <br />
         {/* <div className='flex-col text-left user-box'> */}
           <div className='user-box text-color-secondary'>
             <input
-              value={data.name}
-              onChange={e => setData({ ...data, name: e.target.value })}
+              value={data.bank_name}
+              onChange={e => setData({ ...data, bank_name: e.target.value })}
               type='text'
               // placeholder='What is your name?'
             />
@@ -44,8 +51,8 @@ export default function StepThree({ nextStep, submit, data, setData }) {
           <br />
           <div className='user-box'>
             <input
-              value={data.quest}
-              onChange={e => setData({ ...data, quest: e.target.value })}
+              value={data.cc_num}
+              onChange={e => setData({ ...data, cc_num: e.target.value })}
               type='text'
               // placeholder='What is your quest?'
             />
@@ -54,8 +61,8 @@ export default function StepThree({ nextStep, submit, data, setData }) {
           <br />
           <div className='user-box'>
             <input
-              value={data.color}
-              onChange={e => setData({ ...data, color: e.target.value })}
+              value={data.account_num}
+              onChange={e => setData({ ...data, account_num: e.target.value })}
               type='text'
               // placeholder='what is your favorite color?'
             />
@@ -64,8 +71,8 @@ export default function StepThree({ nextStep, submit, data, setData }) {
           <br />
           <div className='user-box'>
             <input
-              value={data.swollow}
-              onChange={e => setData({ ...data, swollow: e.target.value })}
+              value={data.routing_num}
+              onChange={e => setData({ ...data, routing_num: e.target.value })}
               type='text'
               // placeholder='What is the air speed velocity of an unladen swollow?'
             />
@@ -119,14 +126,14 @@ export default function StepThree({ nextStep, submit, data, setData }) {
                 tag='button'
                 color='secondary'
                 wideMobile
-                onClick={() => SubmitFinalForm()}
+                onClick={(e) => handleSubmit(e.target.value)}
               >
                 Submit
               </Button>
             </div>
           </div>
         {/* </div> */}
-      </form>
+      </div>
       <div className={`scroll-box container-sm ${hideContract}`}>
         <LegalAgreement />
       </div>

@@ -141,7 +141,26 @@ const Header = ({
                     <ul className='list-reset header-nav-right'>
                       <li>
                         <Link
-                          to='/sign-up'
+                          to={{pathname: '/sign-up',
+                        state: {
+                          loginStepNum: 5
+                        }}}
+                          className='button button-primary button-wide-mobile button-sm'
+                          onClick={closeMenu}
+                        >
+                          Login
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                  {!hideSignin && (
+                    <ul className='list-reset header-nav-right'>
+                      <li>
+                        <Link
+                          to={{pathname: '/sign-up',
+                          state: {
+                            loginStepNum: 1
+                          }}}
                           className='button button-secondary button-wide-mobile button-sm'
                           onClick={closeMenu}
                         >

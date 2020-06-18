@@ -1,19 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
-import Button from '../../elements/Button';
-import Image from '../../elements/Image';
-import Radio from '../../elements/Radio';
-import FormLabel from '../../elements/FormLabel';
-import Input from '../../elements/Input';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
 import PageSteps from './PageSteps';
 import RegisterForm from './RegisterForm';
-import StepThree from './StepThree';
-import StepTwo from './StepTwo';
+import BankInfo from './BankInfo';
+import UserInfo from './UserInfo';
 import SubmittedForm from './SubmittedForm';
 import LoginForm from './LoginForm';
 import ConfirmEmailForm from './ConfirmEmailForm';
+import Welcome from './Welcome';
 
 export default function SignUp({
   className,
@@ -24,9 +18,12 @@ export default function SignUp({
   hasBgColor,
   invertColor,
   pushLeft,
+  match,
   ...props
 }) {
+  // console.log('sign-up-prips', props)
   const [step, setStep] = useState(1);
+  const [userId, setUserId] = useState(null);
   const [data, setData] = useState({
     firstName: '',
     lastName: '',
@@ -39,33 +36,23 @@ export default function SignUp({
     country: '',
     state: '',
     city: '',
-    number: '',
-    name: '',
-    quest: '',
-    color: '',
-    swollow: '',
+    phone_number: '',
+    bank_name: '',
+    cc_num: '',
+    account_num: '',
+    routing_num: '',
     termsAccepted: false
   });
-  // FORM ONE
-  // const [firstName, setFirstName] = useState('');
-  // const [lastName, setLastName] = useState('');
-  // const [email, setEmail] = useState('');
-  // const [password, setPassword] = useState('');
-  // //FORM TWO
-  // const [addressOne, setaddressOne] = useState('');
-  // const [addressTwo, setaddressTwo] = useState('');
-  // const [zipCode, setzipCode] = useState('');
-  // const [country, setcountry] = useState('');
-  // const [state, setstate] = useState('');
-  // const [city, setcity] = useState('');
-  // const [number, setNumber] = useState('');
-  // //FORM THREE
-  // const [name, setName] = useState('');
-  // const [quest, setQuest] = useState('');
-  // const [color, setColor] = useState('');
-  // const [swollow, setSwollow] = useState('');
-  // const [termsAccepted, setTermsAccepted] = useState('');
 
+
+    // switching forms from login to register from the header nav:
+    useEffect(() => {
+      if(props.location.state ){
+        const {loginStepNum} = props.location.state 
+        setStep(loginStepNum)
+      }
+    }, [props.location.state]);
+    // const wtf = props.staticContext
   const outerClasses = classNames(
     'testimonial section',
     topOuterDivider && 'has-top-divider',
@@ -74,7 +61,6 @@ export default function SignUp({
     invertColor && 'invert-color',
     className
   );
-    // console.log('fn', firstName)
   const innerClasses = classNames(
     'testimonial-inner section-inner',
     topDivider && 'has-top-divider',
@@ -82,73 +68,49 @@ export default function SignUp({
     'bg-color-dark'
   );
   const nextStep = e => {
-    if (e == 2) {
+    if (e === 2) {
       setStep(2);
-    } else if (e == 3) {
+    } else if (e === 3) {
       setStep(3);
-    } else if (e == 4) {
+    } else if (e === 4) {
       setStep(4);
-    } else if (e == 1) {
+    } else if (e === 1) {
       // register form
       setStep(1);
     } else if(e === 5){
       // Login form
       setStep(5)
     } else if(e === 6){
+      //confirm email
       setStep(6)
+    } else if(e === 7){
+      // welcome (after log in) page
+      setStep(7)
     }
   };
-// console.log(data)
+  //
+  //This submit is usless-- breaks when removed. fix later
+  //
   const submit = userData => {
     console.log('ud', userData);
-    // setData({
-    //   firstName,
-    //   lastName,
-    //   email,
-    //   password,
-    //   addressOne,
-    //   addressTwo,
-    //   zipCode,
-    //   country,
-    //   state,
-    //   city,
-    //   number,
-    //   name,
-    //   quest,
-    //   color,
-    //   swollow
-    // });
     console.log('data', data);
   };
-  const registerUser = (e) =>{
-    e.preventDefault();
-    console.log(e);
-    console.log(data.firstName , data.lastName, data.email, data.password);
-    axios.post('localhost:8080/xbanc/index.php', data).then((res)=>{
-      console.log(res)
-    })
-  }
-// console.log(data.firstName)
   const checkStep = e => {
-    if (step <= 3) {
-      return step == 2 ? (
-        <StepTwo nextStep={nextStep} setData={setData} data={data} />
-      ) : (
-        <StepThree
-          nextStep={nextStep}
-          setData={setData}
-          data={data}
-          submit={submit}
-        />
-      );
-    } else if (step == 4) {
+    if (step === 1) {
+      return <RegisterForm nextStep={nextStep} setData={setData} data={data} userId={userId} setUserId={setUserId} />
+    }else if (step === 2){
+      return <UserInfo nextStep={nextStep} setData={setData} data={data} userId={userId} />
+    } else if (step === 3){
+      return <BankInfo nextStep={nextStep} setData={setData} data={data} submit={submit} userId={userId}/>
+    } else if (step === 4) {
       //Thank You Page
       return <SubmittedForm nextStep={nextStep} />;
-    } else if(step == 5){
-      return <LoginForm nextStep={nextStep} setData={setData} data={data} register={registerUser} />
-    } else if(step == 6){
-      return <ConfirmEmailForm nextStep={nextStep} />
-      
+    } else if(step === 5){
+      return <LoginForm nextStep={nextStep} setData={setData} data={data} />
+    } else if(step === 6){
+      return <ConfirmEmailForm nextStep={nextStep} />    
+    } else if (step === 7){
+      return <Welcome nextStep={nextStep} />
     }
   };
 
@@ -164,26 +126,15 @@ export default function SignUp({
           <div className='flex-row-around col-sm-center'>
             {/* Form BOX */}
             <div className=' lg-w-100  bg-color-primary'>
-              {step == 1 ? (
-                <RegisterForm nextStep={nextStep} setData={setData} data={data} register={registerUser} />
-              ) : (
-                checkStep()
-              )}
+              {checkStep()}
             </div>
             <br className='lg-hide' />
             <br className='lg-hide' />
             <br className='lg-hide' />
             <br className='lg-hide' />
-            {/* image container */}
             <div
               className={`hero-content flex-col-center sm-w-100 w-50 lg-mr-32`}
             >
-              {/* <Image
-                src={require(`../../../assets/Svg/security.svg`)}
-                alt='Features tile icon 03'
-                width={450}
-                height={450}
-              /> */}
               <div className='login-box flex-col card-bg'>
                 <div className='text-color-primary '>
                   <div className='m-0 p-0 bg-color-light-2'>
