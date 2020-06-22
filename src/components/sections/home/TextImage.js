@@ -32,7 +32,7 @@ export default function TextImage({
     <section {...props} className={outerClasses}>
     {/* TODO: MAYBE ADD CONTAINER CLASS LINE BELOW */}
       <div className='lg-pl-32 lg-pr-32 bg-color-light-2 flex-row-around col-sm'>
-        <div className='hero-content flex-col-center lg-p-32 lg-mr-32 reveal-from-left sm-p-16'>
+        <div className='hero-content flex-col-center p-32 lg-mr-32 reveal-from-left sm-p-16'>
           <Image
             src={require('../../../assets/Svg/lightbulb_moment.svg')}
             height={450}

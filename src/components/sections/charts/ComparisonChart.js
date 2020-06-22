@@ -7,27 +7,19 @@ export default function ComparisonChart() {
     <div className='container-sm comparison-chart-wrap mb-32'>
       <h1>Why People Choose XBanc</h1>
       <div className='comparison-chart-row header-row'>
-        <div className='comparison-chart-cell colspan-2 text-color-secondary'>
+        <div className='comparison-chart-cell colspan-2 text-xs text-color-secondary'>
           <b>Features</b>
         </div>
-        <div className='comparison-chart-cell text-color-secondary'>
+        <div className='comparison-chart-cell text-color-secondary text-xs'>
           <b>Other Banks</b>
         </div>
-        <div className='comparison-chart-cell text-color-secondary'>
+        <div className='comparison-chart-cell text-color-secondary text-xs'>
           <b>XBanc</b>
         </div>
       </div>
       <div className='comparison-chart-row'>
         {' '}
-        <div className='comparison-chart-cell colspan-2'>
-          Control challenge types shown
-        </div>
-        <div className='comparison-chart-cell'>Limited</div>
-        <div className='comparison-chart-cell'>Total</div>
-      </div>
-      <div className='comparison-chart-row'>
-        {' '}
-        <div className='comparison-chart-cell colspan-2'>
+        <div className='comparison-chart-cell colspan-2 text-xs'>
           Earn rewards for human solves
         </div>
         <div className='comparison-chart-cell'>Limited</div>
@@ -35,7 +27,7 @@ export default function ComparisonChart() {
       </div>
       <div className='comparison-chart-row'>
         {' '}
-        <div className='comparison-chart-cell colspan-2'>
+        <div className='comparison-chart-cell colspan-2 text-xs'>
           World-class anti-bot protection
         </div>
         <div className='comparison-chart-cell'>
@@ -55,7 +47,7 @@ export default function ComparisonChart() {
       </div>
       <div className='comparison-chart-row'>
         {' '}
-        <div className='comparison-chart-cell colspan-2'>
+        <div className='comparison-chart-cell colspan-2 text-xs'>
           GDPR and CCPA-friendly privacy policy
         </div>
         <div className='comparison-chart-cell'>
@@ -75,7 +67,7 @@ export default function ComparisonChart() {
       </div>
       <div className='comparison-chart-row'>
         {' '}
-        <div className='comparison-chart-cell colspan-2'>
+        <div className='comparison-chart-cell colspan-2 text-xs'>
           Launch your own challenge content
         </div>
         <div className='comparison-chart-cell'>
@@ -95,7 +87,7 @@ export default function ComparisonChart() {
       </div>
       <div className='comparison-chart-row'>
         {' '}
-        <div className='comparison-chart-cell colspan-2'>
+        <div className='comparison-chart-cell colspan-2 text-xs'>
           Multi-user dashboards
         </div>
         <div className='comparison-chart-cell'>
@@ -115,7 +107,7 @@ export default function ComparisonChart() {
       </div>
       <div className='comparison-chart-row'>
         {' '}
-        <div className='comparison-chart-cell colspan-2'>
+        <div className='comparison-chart-cell colspan-2 text-xs'>
           Advanced reporting features
         </div>
         <div className='comparison-chart-cell'>
@@ -135,7 +127,7 @@ export default function ComparisonChart() {
       </div>
       <div className='comparison-chart-row'>
         {' '}
-        <div className='comparison-chart-cell colspan-2'>
+        <div className='comparison-chart-cell colspan-2 text-xs'>
           Fine-grained difficulty levels
         </div>
         <div className='comparison-chart-cell'>

@@ -3,13 +3,11 @@ import ButtonGroup from '../../elements/ButtonGroup';
 import Button from '../../elements/Button';
 import Image from '../../elements/Image';
 
-export default function HaroCard(props) {
-  const { data, animateRight } = props;
-  // console.log(data);
+export default function HaroCard({ data, animateRight }) {
   return (
     <div className='flex-row hero-bg-img sm-hide'>
       <div className='col-sm w-50 sm-hide relative'>
-        <div className='hero-content lg-p-32 lg-mr-32 img-absolute bold p-8 flex-col-center w-100  reveal-from-left'>
+        <div className='hero-content p-32 lg-mr-32 img-absolute bold p-8 flex-col-center w-100  reveal-from-left'>
           <h1 className='mb-0 '>
             <span className='text-color-secondary mr-16'>
               {data['color-heading']}

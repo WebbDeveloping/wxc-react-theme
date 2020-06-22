@@ -48,7 +48,7 @@ const data = {
     {
       id: 4,
       index: 3,
-      'color-heading': 'Personal Banking',
+      'color-heading': 'PERSONAL BANKING',
       heading: '',
       'heading-2': '',
       subheading:
@@ -79,13 +79,13 @@ const Hero = ({
   invertColor,
   ...props
 }) => {
-  // const [animate, setAnimate] = useState(false);
-  // const handleClick = () => setAnimate(!animate);
-  // const [dataList, setDataList] = useState(data.properties);
+  const [animate, setAnimate] = useState(false);
+  const handleClick = () => setAnimate(!animate);
+  const [dataList, setDataList] = useState(data.properties);
   const [activeHeroContent, setHeroContent] = useState(data.properties[0]);
 
   const buttonClick = e => {
-
+    console.log('Hero.js', e)
     if (e === 1) {
       setHeroContent(data.properties[0]);
     } else if (e === 2) {

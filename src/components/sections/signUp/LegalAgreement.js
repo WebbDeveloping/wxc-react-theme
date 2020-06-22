@@ -4,7 +4,7 @@ export default function LegalAgreement() {
 
   return (
     //we need padding 30 around the whole container
-    <div>
+    <div className='w-100'>
       <div className='p-32 text-color-high'>
         <br />
         <br />

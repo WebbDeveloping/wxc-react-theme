@@ -11,7 +11,6 @@ export default function StepThree({ nextStep, submit, data, setData, userId }) {
       console.log(res.data)
       if(res.data.msg === false){
         // setError('* This Email Already Has An Account.')
-        console.log('failure');
       } else {
         nextStep(4)
       }
@@ -34,7 +33,7 @@ export default function StepThree({ nextStep, submit, data, setData, userId }) {
     setHideContract('');
   };
   return (
-    <div className='login-box'>
+    <div className='login-box  sm-br-none sm-m-0'>
       <div className={`center-content  ${hideForm}`}>
         <h3>Connect Your Bank</h3>
         <br />
@@ -137,7 +136,7 @@ export default function StepThree({ nextStep, submit, data, setData, userId }) {
       <div className={`scroll-box container-sm ${hideContract}`}>
         <LegalAgreement />
       </div>
-      <div className={`flex-col-center ${hideContract}`}>
+      <div className={`flex-col ${hideContract}`}>
         <div className='terms-condition flex-col-center'>
           <label className='terms-label'>
             <input

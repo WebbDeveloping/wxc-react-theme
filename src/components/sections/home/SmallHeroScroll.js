@@ -1,9 +1,20 @@
 import React from 'react';
 import Image from '../../elements/Image';
 
-// let hideRarr = '';
-// let hideLarr = '';
+
 export default function SmallHeroScroll({ click, data }) {
+  // TODO:
+  // *
+  // *
+  // *
+  //    I want to hide the arrows to prevent user from clicking
+  //    forward or backward when ther are no more pages
+  //    minor issue I will return to
+  // *
+  // *
+  // *
+  // let hideRarr = '';
+  // let hideLarr = '';
   // if (data['index'] === 0) {
   //   hideRarr = 'sm-hide';
   // }
@@ -11,14 +22,19 @@ export default function SmallHeroScroll({ click, data }) {
   //   hideLarr = 'sm-hide';
   //   // hideRarr = 'sm-hide';
   // }
+  // className={`${hideLarr}`}
+  // className={`${hideRarr}`}
+  // *
+  // *
+  // *
   return (
     <div className='container  w-100 lg-hide box-container'>
       <div className=' flex-row-around box'>
-        <h4 onClick={() => click(data['id'] - 1)}>&larr;</h4>
+        <h4  onClick={() => click(data['id'] - 1)}>&larr;</h4>
         <div onClick={() => click(data['id'])}>
           <h4>{data['color-heading']}</h4>
         </div>
-        <h4 className='bg-color-dark' onClick={() => click(data['id'] + 1)}>
+        <h4  className='bg-color-dark' onClick={() => click(data['id'] + 1)}>
           &rarr;
         </h4>
       </div>

@@ -33,10 +33,20 @@
   -ms-flex-align: end;
   align-items: flex-end;
 }
-.colspan-2{
-    min-height: 10px;
-    -webkit-box-flex: 30%;
-    -webkit-flex: 30%;
-    -ms-flex: 30%;
-    flex: 30%;
+.colspan-2 {
+  min-height: 10px;
+  -webkit-box-flex: 30%;
+  -webkit-flex: 30%;
+  -ms-flex: 30%;
+  flex: 30% 2;
+}
+
+@include media('<=medium') {
+  .comparison-chart {
+    &-wrap {
+      h1 {
+        text-align: center;
+      }
+    }
+  }
 }

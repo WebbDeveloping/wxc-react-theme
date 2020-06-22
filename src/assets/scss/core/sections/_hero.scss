@@ -65,7 +65,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 999999;
+  // z-index: 999999;
+  color: white;
   transform: translate(0, 0);
   h1 {
     color: get-color(light, 1);

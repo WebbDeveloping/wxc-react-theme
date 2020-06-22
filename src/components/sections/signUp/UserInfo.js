@@ -7,7 +7,7 @@ export default function StepTwo({ nextStep, data, setData, userId }) {
   const handleSubmit = e =>{
     const url = 'http://localhost:8080/xbanc/api/userInfo.php'
     axios.post(url, {'user_id': userId, 'address_one': data.addressOne, 'address_two': data.addressTwo, 'zip_code': data.zipCode, 'country': data.country, "state": data.state, "city": data.city, "phone_number": data.phone_number}).then(res =>{
-      console.log(res.data)
+      // console.log(res.data)
       if(res.data.msg === false){
         console.log('failure');
       } else {
@@ -16,7 +16,7 @@ export default function StepTwo({ nextStep, data, setData, userId }) {
     }).catch(err =>console.log('err', err));
   }
   return (
-    <div className='login-box'>
+    <div className='login-box sm-m-0 sm-br-none'>
     <h2>Tell US ABOUT YOURSELF</h2>
     <div>
       <div className='user-box'>

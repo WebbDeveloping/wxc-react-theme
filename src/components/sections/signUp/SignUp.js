@@ -8,6 +8,7 @@ import SubmittedForm from './SubmittedForm';
 import LoginForm from './LoginForm';
 import ConfirmEmailForm from './ConfirmEmailForm';
 import Welcome from './Welcome';
+import LoadingBars from './LoadingBars';
 
 export default function SignUp({
   className,
@@ -23,6 +24,7 @@ export default function SignUp({
 }) {
   // console.log('sign-up-prips', props)
   const [step, setStep] = useState(1);
+  const [hideSteps, setHideSteps] = useState('');
   const [userId, setUserId] = useState(null);
   const [data, setData] = useState({
     firstName: '',
@@ -49,20 +51,21 @@ export default function SignUp({
     useEffect(() => {
       if(props.location.state ){
         const {loginStepNum} = props.location.state 
-        setStep(loginStepNum)
+        setStep(loginStepNum);
+        if(props.location.state.loginStepNum === 5){
+          setHideSteps('d-none');
+        } else if( props.location.state.loginStepNum === 1){
+          setHideSteps('');
+        }
       }
     }, [props.location.state]);
     // const wtf = props.staticContext
   const outerClasses = classNames(
     'testimonial section',
-    topOuterDivider && 'has-top-divider',
-    bottomOuterDivider && 'has-bottom-divider',
-    hasBgColor && 'has-bg-color',
-    invertColor && 'invert-color',
     className
   );
   const innerClasses = classNames(
-    'testimonial-inner section-inner',
+    'testimonial-inner section-inner sm-pt-0',
     topDivider && 'has-top-divider',
     bottomDivider && 'has-bottom-divider',
     'bg-color-dark'
@@ -82,18 +85,21 @@ export default function SignUp({
       setStep(5)
     } else if(e === 6){
       //confirm email
-      setStep(6)
+      setStep(6);
     } else if(e === 7){
       // welcome (after log in) page
       setStep(7)
+    } else if(e === 8){
+      // loading bars
+      setStep(8)
     }
   };
   //
   //This submit is usless-- breaks when removed. fix later
   //
   const submit = userData => {
-    console.log('ud', userData);
-    console.log('data', data);
+    // console.log('ud', userData);
+    // console.log('data', data);
   };
   const checkStep = e => {
     if (step === 1) {
@@ -111,14 +117,16 @@ export default function SignUp({
       return <ConfirmEmailForm nextStep={nextStep} />    
     } else if (step === 7){
       return <Welcome nextStep={nextStep} />
+    } else if (step === 8){
+      return <LoadingBars text='One Moment...'  loadingClass='loading' />
     }
   };
-
+  // console.log(props, outerClasses)
   return (
     <section {...props} className={outerClasses}>
       <div className=''>
         <br className='sm-hide' />
-        <div className='sm-hide'>
+        <div className={`sm-hide ${hideSteps}`}>
           <PageSteps step={step} />
         </div>
         <br className='sm-hide' />
@@ -135,7 +143,7 @@ export default function SignUp({
             <div
               className={`hero-content flex-col-center sm-w-100 w-50 lg-mr-32`}
             >
-              <div className='login-box flex-col card-bg'>
+              <div className='login-box flex-col card-bg md-hide '>
                 <div className='text-color-primary '>
                   <div className='m-0 p-0 bg-color-light-2'>
                     <h6 className='text-color-secondary m-0 p-0'>
@@ -174,7 +182,7 @@ export default function SignUp({
           <p>
             ^No Fee Overdraft requirements: No Fee Overdraft gives you
             flexibility to overdraw your account up to $50 on any transaction
-            made with your Varo Visa Debit Card. To qualify: Make at least five
+            made with your XBanc Debit Card. To qualify: Make at least five
             qualifying debit card purchases in each calendar month, AND Receive
             total payroll or government direct deposits of $1,000 or more in the
             same calendar month. Enroll by turning on No Fee Overdraft in the

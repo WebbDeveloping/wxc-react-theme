@@ -34,9 +34,9 @@
     cursor: pointer;
 }
 .scroll-box{
-    border: 2px solid get-color(secondary, 1);
+    // border: 2px solid get-color(secondary, 1);
     height: 800px;
-    width: 500px;
+    // width: 500px;
     overflow: scroll;
     background-color: get-color(light, 1);
 }
@@ -268,3 +268,35 @@
 //     bottom: 100%;
 //   }
 // }
+.confirm-email-wrapper{
+
+
+    input {
+      box-sizing: border-box;
+      font-size: 2rem;
+      padding: 1rem;
+      display: block;
+      margin: 2rem auto;
+    }
+    
+    ul {
+      list-style: none;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    li {
+      color: #666;
+      strong { color: #000; }
+      + .label { margin-top: 1rem; }
+      &.label {
+        color: #CCC;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        letter-spacing: 0.0125em;
+        margin-bottom: 0.25rem;
+      }
+    
+  }
+}
