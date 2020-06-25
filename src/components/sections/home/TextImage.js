@@ -41,7 +41,7 @@ export default function TextImage({
         </div>
         <div className='img-text flex-col-center lg-mr-32 reveal-from-right '>
           <h1 className='mb-0 '>
-            <span className='text-color-secondary'>X-WORLD</span> is the new
+            <span className='text-color-secondary'>XWORLD</span> is the new
           </h1>
           <h1 className='mb-4 mt-4 '>secure way to pay</h1>
           <div className='container-xs'>

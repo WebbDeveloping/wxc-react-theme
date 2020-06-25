@@ -135,6 +135,20 @@
 .fs-14 {
   font-size: 14px;
 }
+.fs-80{
+  font-size: 80px !important;
+}
+.headline{
+  &-title{
+
+    font-family: 'NHaasGroteskDSW01-65Md';
+    font-size: 90px;
+    line-height: 1;
+    letter-spacing: 3px;
+    // margin-bottom: 18px;
+    font-weight: 700;
+  }
+}
 // /display: none
 .d-none{
   display: none;
@@ -341,6 +355,7 @@ img.has-shadow {
   width: 100%;
 }
 
+
 // Spacing, margin
 .m-0 {
   margin: 0;
@@ -491,7 +506,7 @@ img.has-shadow {
 }
 
 .pt-0 {
-  padding-top: 0;
+  padding-top: 0 !important;
 }
 
 .pr-0 {
@@ -703,6 +718,20 @@ img.has-shadow {
   // }
   .sm-p-8{
     padding: 8px !important;
+  }
+  .headline{
+    &-title{
+  
+      font-family: 'NHaasGroteskDSW01-65Md';
+      font-size: 45px;
+      line-height: 1;
+      letter-spacing: 3px;
+      // margin-bottom: 18px;
+      font-weight: 700;
+    }
+    &-paragraph{
+      width: 100%;
+    }
   }
   .col-sm {
     display: flex;

@@ -1,3 +1,7 @@
 @if ( $font--provider == 'Google Fonts' ) {
     @import url('https://fonts.googleapis.com/css?family=#{$font--import}&display=swap');
 }
+// @if ( $font--provider == 'haas' ) {
+//     @import url('https://fonts.googleapis.com/css?family=#{$font--import}&display=swap');
+// }
+@import url(//db.onlinewebfonts.com/c/ce7d1d5771e921b59bf333b1ef2d1a62?family=NHaasGroteskDSW01-65Md);

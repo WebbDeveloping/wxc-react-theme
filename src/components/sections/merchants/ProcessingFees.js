@@ -43,7 +43,7 @@ const ProcessingFees = ({
           <div className='hero-content'>
             <h1
               className='mt-0 mb-16 reveal-from-bottom'
-              data-reveal-delay='200'
+              
             >
               <span className='text-color-primary'>Save</span> on processing
               fees,
@@ -51,11 +51,11 @@ const ProcessingFees = ({
             <div className='container-xss '>
               <p
                 className='m-0 mb-32 reveal-from-bottom'
-                data-reveal-delay='400'
+                
               >
                 fraud costs and charge backs.
               </p>
-              <div className='reveal-from-bottom' data-reveal-delay='600'>
+              <div className='reveal-from-bottom' >
                 <div className='flex-row col-sm  m-0'>
                   <h5 className=' m-24'>
                     Use XPay with your existing processing <br /> <br />
@@ -80,9 +80,6 @@ const ProcessingFees = ({
                 </div>
               </div>
             </div>
-            <br />
-            <br />
-            <br />
             <p>
               <span className='text-color-primary'>*Learn More</span>
             </p>

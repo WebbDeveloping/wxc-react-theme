@@ -10,13 +10,13 @@ const data = {
     {
       id: 1,
       index: 0,
-      'color-heading': 'X-WORLD',
+      'color-heading': 'XWORLD',
       heading: ' is the new',
       'heading-2': 'secure way to bank',
-      subheading: 'We take your security seriously',
+      subheading: 'Banking with modern solutions',
       'button-text': 'Get Started',
       'img-path': 'security.svg',
-      smHeading: 'We take your security seriously',
+      smHeading: 'Banking for the modern world',
       active: 1
     },
     {
@@ -26,7 +26,7 @@ const data = {
       heading: '',
       'heading-2': '',
       subheading:
-        'Our digital technology and industry expertise enables vendor financing programs for business equipment financing.',
+        'Get a XBanc Account, then set up your high-yield XBanc Savings Account.',
       'button-text': 'Explore Business Financing',
       'img-path': 'undraw_revenue_3osh.svg',
       smHeading: 'Banking made easy',
@@ -48,7 +48,7 @@ const data = {
     {
       id: 4,
       index: 3,
-      'color-heading': 'PERSONAL BANKING',
+      'color-heading': 'PERSONAL',
       heading: '',
       'heading-2': '',
       subheading:
@@ -113,11 +113,7 @@ const Hero = ({
         <SmallHeroScroll data={activeHeroContent} click={buttonClick} />
         <br className='lg-hide' />
         <br className='lg-hide' />
-        <div className='lg-hide'>
-          <Button tag='a' color='secondary' wideMobile href='/sign-up'>
-            {activeHeroContent['button-text']}
-          </Button>
-        </div>
+
         <br className='lg-hide' />
         {/* <br className='sm-hide' /> */}
         <HeroScrollButtons

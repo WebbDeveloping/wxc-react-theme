@@ -47,7 +47,7 @@ export default function HeroScrollButtons({ click, data }) {
           onClick={() => setTab(1)}
           className={`${activeTab1} box button-square`}
         >
-          <h4>X-WORLD</h4>
+          <h4>XWORLD</h4>
         </div>
         <div
           onClick={() => setTab(2)}

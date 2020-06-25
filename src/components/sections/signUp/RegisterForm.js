@@ -30,7 +30,7 @@ export default function RegisterForm({ nextStep, data, setData, setUserId }) {
   };
   return (
     <div className='login-box sm-m-0 sm-br-none'>
-      <h2>Apply for an XBanc Account today.</h2>
+      <h2>Apply for an XBanc Account Today.</h2>
       <div className='pt-32'>
         <div className='user-box'>
           <input
@@ -90,9 +90,8 @@ export default function RegisterForm({ nextStep, data, setData, setUserId }) {
           <label>Confirm Password</label>
         </div>
         <div className='flex-row m-8 fs-16 '>
-          <p className=''>Already an XPay customer?</p>
-          <div
-          >
+          <p className=''>Already an XPay Customer?</p>
+          <div>
             {' '}
             <Link
               to={{
@@ -101,9 +100,9 @@ export default function RegisterForm({ nextStep, data, setData, setUserId }) {
                   loginStepNum: 5
                 }
               }}
-              className=' button-link mt-0 p-0 ml-16'
+              className='button-link mt-0 p-0 ml-16'
             >
-              <u>Sign up</u>
+              <u>Login Here</u>
             </Link>
           </div>
         </div>

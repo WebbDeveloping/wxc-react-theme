@@ -1,0 +1,17 @@
+.phone-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    // align-content: center;
+    img{
+        // height: 50%;
+        width: 50%;
+            height: 100%;
+    }
+}
+.clear-img{
+    img{
+        height: 200px;
+    }
+}

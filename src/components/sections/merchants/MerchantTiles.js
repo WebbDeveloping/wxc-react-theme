@@ -2,8 +2,10 @@ import React from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../../utils/SectionProps';
 import SectionHeader from '../partials/SectionHeader';
-
+import ComparisonChart from '../charts/ComparisonChart';
 import TileSection from './TileSection';
+import SubPageHero from '../SubPageHero';
+import PhonePic from '../PhonePic';
 
 const propTypes = {
   ...SectionProps.types
@@ -40,7 +42,7 @@ const MerchantTiles = ({
   };
 
   const outerClasses = classNames(
-    'hero section center-content',
+    'features-tiles section pt-0',
     topOuterDivider && 'has-top-divider',
     bottomOuterDivider && 'has-bottom-divider',
     hasBgColor && 'has-bg-color',
@@ -48,27 +50,40 @@ const MerchantTiles = ({
     className
   );
 
-  const innerClasses = classNames(
-    'hero-inner section-inner',
-    topDivider && 'has-top-divider',
-    bottomDivider && 'has-bottom-divider'
-  );
+  const innerClasses = classNames('container');
+  // 'hero-inner section-inner',
+  // topDivider && 'has-top-divider',
+  // bottomDivider && 'has-bottom-divider'
 
   return (
     <section {...props} className={outerClasses}>
-      <div className='container-sm'>
-        <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className='center-content' />
-        </div>
+    <br/>
+    <br/>
+      <div className={innerClasses}>
+        <div className='p-32 has-bg-color ml-8'>
+          <SubPageHero
+            title={`No Overdraft up to $50.`}
+            subtitle={`Avoid overdraft fees with a secure online checking account.`}
+            button1='Get started'
+            button2='Read More'
+          />
+        </div>{' '}
+        <br/>
+        <br/>
+        <PhonePic />
+        <br/>
+        <br/>
+        <ComparisonChart />
       </div>
-      <TileSection
+
+      {/* <TileSection
         tileonehead={tileonehead}
         tiletwohead={tiletwohead}
         tilethreehead={tilethreehead}
         tilethreetext={tilethreetext}
         tiletwotext={tiletwotext}
         tileonetext={tileonetext}
-      />
+      /> */}
     </section>
   );
 };

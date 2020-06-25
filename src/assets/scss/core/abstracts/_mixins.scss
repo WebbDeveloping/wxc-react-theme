@@ -1,13 +1,15 @@
 // Font Family
 @mixin font-family($elem) {
-	font-family: unquote(get-font-family($elem));
+	// font-family: unquote(get-font-family($elem));
+	font-family: 'NHaasGroteskDSW01-65Md';
 }
 
 // Font-size + Line-height + Kerning
 @mixin font-size($elem) {
 	font-size: get-font-size($elem);
 	line-height: get-line-height($elem);
-	letter-spacing: get-kerning($elem);
+	// letter-spacing: get-kerning($elem);
+	letter-spacing: 1.5px;
 }
 
 // Font Weight

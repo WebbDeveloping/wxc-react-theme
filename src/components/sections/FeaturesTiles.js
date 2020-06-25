@@ -61,7 +61,7 @@ const FeaturesTiles = ({
                 </div>
 
                 <div className='features-tiles-item-content text-left'>
-                  <h4 className='mt-0 mb-8 has-underline text-color-secondary'>Personal Banking</h4>
+                  <h4 className='mt-0 mb-8 has-underline text-color-secondary'>Personal</h4>
                   <p className='m-0 text-sm'>
                     Advance your personal savings and achieve your goals with
                     competitive deposit products that help you make the most of

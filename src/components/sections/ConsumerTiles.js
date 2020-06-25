@@ -3,6 +3,12 @@ import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
+import Button from '../elements/Button';
+import ButtonGroup from '../elements/ButtonGroup';
+import PhoneAppSection from './PhoneAppSection';
+import GetApp from './GetApp';
+import PhonePic from './PhonePic';
+import SubPageHero from './SubPageHero';
 // import '../../assets/css/icons.css';
 
 const propTypes = {
@@ -24,7 +30,7 @@ const ConsumerTiles = ({
   ...props
 }) => {
   const outerClasses = classNames(
-    'features-tiles section',
+    'features-tiles section pt-0',
     topOuterDivider && 'has-top-divider',
     bottomOuterDivider && 'has-bottom-divider',
     hasBgColor && 'has-bg-color',
@@ -32,36 +38,42 @@ const ConsumerTiles = ({
     className
   );
 
-  const innerClasses = classNames(
-    'features-tiles-inner section-inner pt-0',
-    topDivider && 'has-top-divider',
-    bottomDivider && 'has-bottom-divider'
-  );
+  const innerClasses = classNames('flex-row-between col-sm pt-0');
 
-  const tilesClasses = classNames(
-    'tiles-wrap center-content',
-    pushLeft && 'push-left'
-  );
+  const tilesClasses = classNames('flex-col-end', pushLeft && 'push-left');
 
   const sectionHeader = {
-    title: 'Life is better,',
-    paragraph: 'when you know your purchase was safe, secure and private.'
+    title: 'TAKING CONTROL,',
+    paragraph: 'when you know your purchase was safe, secure, and private.'
   };
 
   return (
     <section {...props} className={outerClasses}>
       <br />
       <br />
-      <div className='container'>
+      <div className='container pt-0'>
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className='center-content' />
+          <div className='p-32 has-bg-color ml-8'>
+            <SubPageHero
+              title='Ditch monthly bank fees for good.'
+              subtitle='Get an XBanc Account with no monthly fees or minimum balance.'
+              button1='Get started'
+              button2='Read More'
+            />
+            <hr />
+            <hr />
+            {/* <hr /> */}
+            <div className='reveal-from-left'>
+              <PhoneAppSection />
+              <PhonePic />
+            </div>
+          </div>
 
-          <div className={tilesClasses}>
-            <div className='tiles-item reveal-from-bottom'>
+          {/* <div className={tilesClasses}>
+            <div className='tiles-item reveal-from-right'>
               <div className='tiles-item-inner'>
                 <div className='features-tiles-item-header'>
                   <div className=' mb-16'>
-                    {/* features-tiles-item-image */}
                     <Image
                       src={require('./../../assets/Svg/unlocked.svg')}
                       alt='Features tile icon 01'
@@ -115,7 +127,7 @@ const ConsumerTiles = ({
                 <div className='features-tiles-item-header'>
                   <div className='mb-16'>
                     <Image
-                      src={require('./../../assets/Svg/checkmark.svg')}
+                      src={require('./../../assets/Svg/checkmark-blue.svg')}
                       alt='Features tile icon 03'
                       width={64}
                       height={64}
@@ -207,7 +219,7 @@ const ConsumerTiles = ({
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -10,8 +10,6 @@ const Consumer = () => {
   return (
     <>
       <ConsumerTiles className='illustration-section-01' />
-      <PhoneAppSection topDivider className='illustration-section-02' />
-      <GetApp className='illustration-section-01' />
       <Cta split />
     </>
   );

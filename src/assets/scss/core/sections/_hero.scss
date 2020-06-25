@@ -9,7 +9,7 @@
   h1 {
     font-size: 57px !important;
     line-height: 59px !important;
-    letter-spacing: -0.3px;
+    letter-spacing: 0px;
   }
 }
 
@@ -62,14 +62,23 @@
   text-shadow: white 0px 0px 2.5px;
 }
 .sm-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  // z-index: 999999;
   color: white;
   transform: translate(0, 0);
   h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: 0;
+    margin-bottom: 18px;
+    font-weight: 700;
     color: get-color(light, 1);
+  }
+  p {
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 3px;
+    max-width: 496px;
+    margin-bottom: 27px;
   }
 }
 .align-item {

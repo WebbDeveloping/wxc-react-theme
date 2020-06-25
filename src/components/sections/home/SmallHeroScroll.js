@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from '../../elements/Image';
+import Button from '../../elements/Button';
 
 
 export default function SmallHeroScroll({ click, data }) {
@@ -38,19 +39,45 @@ export default function SmallHeroScroll({ click, data }) {
           &rarr;
         </h4>
       </div>
-      <div className='container-xs mt-0 relative '>
-        {/* text-bg */}
-        <div className='m-4 fw-500 sm-header'>
-          <h1 className=' mt-0 text-shadow'>{data['smHeading']}</h1>
-        </div>
-        <div className='sm-img-absolute h-100 w-100 bg-color-light-2'>
-          <Image
-            src={require(`../../../assets/images/networking.jpg`)}
-            // height={'100%'}
-            // width={'100%'}
-          />
-        </div>
+      <div className='m-4 fw-500 sm-header'>
+        <h1 className=' mt-0'>{data['smHeading']}</h1>
+        <p>{data['subheading']}</p>
       </div>
+      <br />
+      <div className='lg-hide'>
+          <Button  tag='a' color='secondary' href='/sign-up'>
+            Get Started
+          </Button>
+          
+        </div>
+        <br />
+        <br />
+        <br />
+        <div
+              className='tiles-item reveal-from-bottom'
+              data-reveal-delay='200'
+            >
+              <div className='tiles-item-inner'>
+                <div className='features-tiles-item-header'>
+                  <div className='mb-16'>
+                    <Image
+                      src={require('../../../assets/Svg/credit-card.svg')}
+                      alt='Features tile icon 05'
+                      width={64}
+                      height={64}
+                    />
+                  </div>
+                </div>
+                <div className='features-tiles-item-content'>
+                  <h4 className='mt-0 mb-8'>BETTER & SMARTER</h4>
+                  <p className='m-0 text-sm'>
+                    How many cards are in your wallet? When do they expire? How
+                    long would it take you to notice one was missing? Now you
+                    can leave your cards at home.
+                  </p>
+                </div>
+              </div>
+            </div>
     </div>
   );
 }

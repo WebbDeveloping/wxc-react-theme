@@ -1,8 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
+import ProcessingFees from './merchants/ProcessingFees';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
+import Button from '../elements/Button';
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -33,7 +35,7 @@ const PhoneAppSection = ({
   );
 
   const innerClasses = classNames(
-    'testimonial-inner section-inner',
+    'testimonial-inner section-inner pt-0',
     topDivider && 'has-top-divider',
     bottomDivider && 'has-bottom-divider'
   );
@@ -41,17 +43,77 @@ const PhoneAppSection = ({
   const tilesClasses = classNames('tiles-wrap', pushLeft && 'push-left');
 
   const sectionHeader = {
-    title: '',
-    paragraph:
-      "This is the world's safest, easiest and most private way to pay."
+    title: '40+ Website Elements',
+    paragraph: ''
   };
 
   return (
     <section {...props} className={outerClasses}>
       <div className='container'>
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className='center-content' />
-          <div className={tilesClasses}>
+          <div className='flex-row-center'>
+            <div className='p-32 mr-16'>
+              <Image
+                src={require('./../../assets/Svg/deliveries.svg')}
+                alt='Features split 01'
+                width={528}
+                height={396}
+              />
+            </div>
+            <div className='p-32'>
+              <h2 className=''>
+                It’s time for a bank account <br /> that treats you better.
+              </h2>
+              <br />
+              <ul>
+                <li>
+                  No monthly fees. No Fee Overdraft. No foreign transaction
+                  fees. No debit card replacement fees.
+                </li>
+                <li>
+                  No minimum balance requirement. We don’t charge fees based on
+                  your balance.{' '}
+                </li>
+                <li>
+                  No fees at 55,000+ Allpoint® ATMs in places you already shop
+                </li>
+                <li>
+                  Helpful Customer Service. We’re available every day except
+                  federal holidays.
+                </li>
+                <li>
+                  Plus, you can save automatically with a high-yield XBanc
+                  Savings Account.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr />
+          <div className='flex-row-center'>
+            <div className='p-32'>
+              <h2 className=''>
+                Know when your account <br /> balance changes.
+              </h2>
+              <br />
+              <p>
+                Push notifications instantly alert you when there’s a <br />
+                deposit to or a withdrawal from your XBanc <br /> 
+                Account and when your debit card is used for a <br />
+                purchase or cash withdrawal.
+              </p>
+            </div>
+            <div className='p-32 mr-16'>
+              <Image
+                src={require('./../../assets/Svg/orderconfirmed.svg')}
+                alt='Features split 01'
+                width={528}
+                height={396}
+              />
+            </div>
+          </div>
+          <hr />
+          <ProcessingFees />
+          {/* <div className={tilesClasses}>
             <div
               className='tiles-item-phone reveal-from-right center-content'
               data-reveal-delay='200'
@@ -74,8 +136,6 @@ const PhoneAppSection = ({
             <div className='tiles-item-phone reveal-from-bottom center-content'>
               <h2>Easy</h2>
               <div className=''>
-                {' '}
-                {/* tiles-item-inner */}
                 <div className='features-tiles-item-header'>
                   <div>
                     <Image
@@ -107,7 +167,7 @@ const PhoneAppSection = ({
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -47,7 +47,7 @@ const Cta = ({
         <div className={innerClasses}>
           <div className='cta-slogan lg-ml-32'>
             <h3 className='m-0 text-color-secondary lg-ml-32'>
-              Get Started With X-World
+              Get Started With XWorld
             </h3>
           </div>
           <div className='cta-action lg-mr-32'>
