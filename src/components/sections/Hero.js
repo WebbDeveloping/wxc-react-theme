@@ -81,7 +81,6 @@ const Hero = ({
   const [activeHeroContent, setHeroContent] = useState(data.properties[0]);
 
   const buttonClick = e => {
-    console.log('Hero.js', e)
     if (e === 1) {
       setHeroContent(data.properties[0]);
     } else if (e === 2) {

@@ -22,7 +22,6 @@ export default function SignUp({
   match,
   ...props
 }) {
-  // console.log('sign-up-prips', props)
   const [step, setStep] = useState(1);
   const [hideSteps, setHideSteps] = useState('');
   const [userId, setUserId] = useState(null);
@@ -121,7 +120,6 @@ export default function SignUp({
       return <LoadingBars text='One Moment...'  loadingClass='loading' />
     }
   };
-  // console.log(props, outerClasses)
   return (
     <section {...props} className={outerClasses}>
       <div className=''>

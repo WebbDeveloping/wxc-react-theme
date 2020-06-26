@@ -15,7 +15,6 @@ export default function RegisterForm({ nextStep, data, setData, setUserId }) {
         password: data.password
       })
       .then(res => {
-        // console.log(res.data)
         if (res.data.user_id) {
           setUserId(res.data.user_id);
         }

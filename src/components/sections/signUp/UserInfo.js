@@ -3,11 +3,9 @@ import Button from '../../elements/Button';
 import axios from 'axios';
 
 export default function StepTwo({ nextStep, data, setData, userId }) {
-  // const [error, setError] = useState('')
   const handleSubmit = e =>{
     const url = 'http://localhost:8080/xbanc/api/userInfo.php'
     axios.post(url, {'user_id': userId, 'address_one': data.addressOne, 'address_two': data.addressTwo, 'zip_code': data.zipCode, 'country': data.country, "state": data.state, "city": data.city, "phone_number": data.phone_number}).then(res =>{
-      // console.log(res.data)
       if(res.data.msg === false){
         console.log('failure');
       } else {
