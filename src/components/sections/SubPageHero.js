@@ -8,12 +8,9 @@ export default function SubPageHero({ title, subtitle, button1, button2 }) {
     <div className='flex-row-around col-sm center-content'>
       <div className='w-50 sm-w-100 flex-col-start headline'>
         <h1 className='headline-title reveal-from-left'>
-          {/* Ditch monthly
-          <br /> bank fees for <br /> good. */}
           {title}
         </h1>
         <p className='reveal-from-left w-80 headline-paragraph'>
-          {/* Get an XBanc Account with no <br /> monthly fees or minimum balance. */}
           {subtitle}
         </p>
         <div className='reveal-from-left mt-16'>

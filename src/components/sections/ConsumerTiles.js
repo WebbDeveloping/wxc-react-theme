@@ -42,8 +42,8 @@ const ConsumerTiles = ({
         <div className={innerClasses}>
           <div className='p-32 has-bg-color ml-8'>
             <SubPageHero
-              title='Ditch monthly bank fees for good.'
-              subtitle='Get an XBanc Account with no monthly fees or minimum balance.'
+              title='Ditch monthly bank fees for good'
+              subtitle='Get an XBanc Account with no monthly fees or minimum balance'
               button1='Get started'
               button2='Read More'
             />

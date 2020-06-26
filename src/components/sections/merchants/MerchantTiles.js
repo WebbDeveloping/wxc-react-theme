@@ -41,8 +41,8 @@ const MerchantTiles = ({
       <div className={innerClasses}>
         <div className='p-32 has-bg-color ml-8'>
           <SubPageHero
-            title={`No Overdraft up to $50.`}
-            subtitle={`Avoid overdraft fees with a secure online checking account.`}
+            title={`No Overdraft up to $50`}
+            subtitle={`Avoid overdraft fees with a secure online checking account`}
             button1='Get started'
             button2='Read More'
           />

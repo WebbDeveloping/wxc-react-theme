@@ -29,7 +29,7 @@
 
 .tiles-item {
   // flex-basis: $tiles-item--width;
-  max-width: $tiles-item--width;
+  // max-width: $tiles-item--width;
   box-sizing: content-box;
   padding: $tiles-items--padding__mobile / 2 + 4;
   // JOE ADDED + 4px to fix the wrap issue
