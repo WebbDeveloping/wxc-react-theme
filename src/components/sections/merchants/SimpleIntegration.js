@@ -88,10 +88,9 @@ const SimpleIntegration = ({
                   </div>
                   <br />
                   <Button
-                    tag='a'
+                    tag='button'
                     color='primary'
                     wideMobile
-                    href='https://github.com/cruip/open-react-template/'
                   >
                     Learn More &#8594;
                   </Button>
@@ -134,10 +133,9 @@ const SimpleIntegration = ({
                   </div>
                   <br />
                   <Button
-                    tag='a'
+                    tag='button'
                     color='primary'
                     wideMobile
-                    href='https://github.com/cruip/open-react-template/'
                   >
                     Learn More &#8594;
                   </Button>
@@ -182,10 +180,9 @@ const SimpleIntegration = ({
                   </div>
                   <br />
                   <Button
-                    tag='a'
+                    tag='button'
                     color='primary'
                     wideMobile
-                    href='https://github.com/cruip/open-react-template/'
                   >
                     Learn More &#8594;
                   </Button>

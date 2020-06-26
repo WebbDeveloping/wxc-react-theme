@@ -8,12 +8,15 @@ import * as serviceWorker from './serviceWorker';
 
 //import './App.css';
 import './assets/scss/style.scss';
+import ScrollToTop from './utils/ScrollToTop';
 
 const history = createBrowserHistory();
 
 ReactDOM.render(
-  <Router history={history} >
-    <App />
+  <Router history={history}>
+    <ScrollToTop>
+      <App />
+    </ScrollToTop>
   </Router>,
   document.getElementById('root')
 );

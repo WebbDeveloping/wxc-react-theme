@@ -10,7 +10,8 @@ const AboutUs = () => {
       <LearnMore
         invertMobile
         topDivider
-        imageFill />
+        imageFill
+      />
       <Cta split />
     </>
   );

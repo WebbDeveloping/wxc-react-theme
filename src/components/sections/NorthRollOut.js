@@ -63,16 +63,12 @@ const NorthRollOut = ({
               <div className='reveal-from-bottom' data-reveal-delay='600'>
                 <ButtonGroup>
                   <Button
-                    tag='a'
+                    tag='button'
                     color='primary'
                     wideMobile
-                    href='https://cruip.com/'
                   >
                     PROFESSIONAL CONTACT
                   </Button>
-                  {/* <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
-                    View on Github
-                    </Button> */}
                 </ButtonGroup>
               </div>
             </div>

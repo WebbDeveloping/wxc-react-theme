@@ -25,7 +25,7 @@ export default function ConfirmEmailForm({ nextStep }) {
 {     bars ? <Button
         value='value 2 bruh'
         type='submit'
-        tag='a'
+        tag='button'
         color='secondary'
         wideMobile
         onClick={() => handleClick(2)}
@@ -38,21 +38,3 @@ export default function ConfirmEmailForm({ nextStep }) {
     </div>
   );
 }
-
-// function ConfirmPage({nextStep}) {
-//   return (
-//     <div className='center-content p-8 confirm-email-wrapper'>
-//       <h1>Please check your email</h1>
-//       <Button
-//         value='value 2 bruh'
-//         type='submit'
-//         tag='a'
-//         color='secondary'
-//         wideMobile
-//         onClick={() => nextStep(2)}
-//       >
-//         Continue
-//       </Button>
-//     </div>
-//   );
-// }
