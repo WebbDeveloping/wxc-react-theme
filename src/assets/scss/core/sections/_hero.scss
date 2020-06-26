@@ -5,6 +5,19 @@
   }
 }
 
+.features-tiles-item-image {
+  display: inline-flex;
+  border-radius: 50%;
+  background-color: get-color(primary, 6);
+}
+.features-tiles-item-image-merchant {
+  display: inline-flex;
+  border-radius: 50%;
+  height: 155px;
+  width: 155px;
+  background-color: get-color(primary, 6);
+}
+
 .hero-content {
   h1 {
     font-size: 57px !important;
