@@ -1,6 +1,5 @@
 import React from 'react';
 import Cta from '../components/sections/Cta';
-import MerchantTiles from '../components/sections/merchants/MerchantTiles';
 import ProcessingFees from '../components/sections/merchants/ProcessingFees';
 import CompetitiveAdvantage from '../components/sections/isos/CompetitiveAdvantage';
 import SubPageHero from '../components/sections/SubPageHero';

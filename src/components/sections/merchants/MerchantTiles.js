@@ -1,9 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../../utils/SectionProps';
-import SectionHeader from '../partials/SectionHeader';
 import ComparisonChart from '../charts/ComparisonChart';
-import TileSection from './TileSection';
 import SubPageHero from '../SubPageHero';
 import PhonePic from '../PhonePic';
 
@@ -25,22 +23,6 @@ const MerchantTiles = ({
   invertColor,
   ...props
 }) => {
-  const {
-    tileonehead,
-    tiletwohead,
-    tilethreehead,
-    tilethreetext,
-    tiletwotext,
-    tileonetext,
-    title,
-    paragraph
-  } = props;
-
-  const sectionHeader = {
-    title: title,
-    paragraph: paragraph
-  };
-
   const outerClasses = classNames(
     'features-tiles section pt-0',
     topOuterDivider && 'has-top-divider',
@@ -51,9 +33,6 @@ const MerchantTiles = ({
   );
 
   const innerClasses = classNames('container');
-  // 'hero-inner section-inner',
-  // topDivider && 'has-top-divider',
-  // bottomDivider && 'has-bottom-divider'
 
   return (
     <section {...props} className={outerClasses}>
@@ -75,15 +54,6 @@ const MerchantTiles = ({
         <br/>
         <ComparisonChart />
       </div>
-
-      {/* <TileSection
-        tileonehead={tileonehead}
-        tiletwohead={tiletwohead}
-        tilethreehead={tilethreehead}
-        tilethreetext={tilethreetext}
-        tiletwotext={tiletwotext}
-        tileonetext={tileonetext}
-      /> */}
     </section>
   );
 };

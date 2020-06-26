@@ -2,9 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import ProcessingFees from './merchants/ProcessingFees';
-import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
-import Button from '../elements/Button';
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -39,13 +37,6 @@ const PhoneAppSection = ({
     topDivider && 'has-top-divider',
     bottomDivider && 'has-bottom-divider'
   );
-
-  const tilesClasses = classNames('tiles-wrap', pushLeft && 'push-left');
-
-  const sectionHeader = {
-    title: '40+ Website Elements',
-    paragraph: ''
-  };
 
   return (
     <section {...props} className={outerClasses}>
@@ -113,61 +104,6 @@ const PhoneAppSection = ({
           </div>
           <hr />
           <ProcessingFees />
-          {/* <div className={tilesClasses}>
-            <div
-              className='tiles-item-phone reveal-from-right center-content'
-              data-reveal-delay='200'
-            >
-              <h2>Safe</h2>
-              <div className=''>
-                <div className='features-tiles-item-header'>
-                  <div>
-                    <Image
-                      src={require('./../../assets/images/wxc/app_home.png')}
-                      alt='Features split 01'
-                      width={528}
-                      height={396}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className='tiles-item-phone reveal-from-bottom center-content'>
-              <h2>Easy</h2>
-              <div className=''>
-                <div className='features-tiles-item-header'>
-                  <div>
-                    <Image
-                      src={require('./../../assets/images/wxc/app_timeline.png')}
-                      alt='Features split 01'
-                      width={528}
-                      height={396}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className='tiles-item-phone reveal-from-left center-content'
-              data-reveal-delay='200'
-            >
-              <h2>Private</h2>
-              <div className=''>
-                <div className='features-tiles-item-header'>
-                  <div>
-                    <Image
-                      src={require('./../../assets/images/wxc/app_wallet.png')}
-                      alt='Features split 01'
-                      width={528}
-                      height={396}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </section>

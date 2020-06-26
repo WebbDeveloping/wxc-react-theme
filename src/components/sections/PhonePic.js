@@ -1,6 +1,4 @@
 import React from 'react';
-import Image from '../elements/Image';
-import Button from '../elements/Button';
 
 export default function PhonePic() {
   return (

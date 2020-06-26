@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Button from '../../elements/Button';
 import Input from '../../elements/Input';
 import LoadingBars from './LoadingBars';
 
 export default function ConfirmEmailForm({ nextStep }) {
-  const [count, setCount] = useState('');
   const [bars, setBars] = useState(true);
   const handleClick = e =>{
     setBars(!bars)

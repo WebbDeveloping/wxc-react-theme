@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
-import Button from '../elements/Button';
 import HeroCard from './home/HaroCard';
 import HeroScrollButtons from './home/HeroScrollButtons';
 import SmallHeroScroll from './home/SmallHeroScroll';
@@ -79,9 +78,6 @@ const Hero = ({
   invertColor,
   ...props
 }) => {
-  const [animate, setAnimate] = useState(false);
-  const handleClick = () => setAnimate(!animate);
-  const [dataList, setDataList] = useState(data.properties);
   const [activeHeroContent, setHeroContent] = useState(data.properties[0]);
 
   const buttonClick = e => {
