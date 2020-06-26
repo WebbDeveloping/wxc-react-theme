@@ -33,7 +33,7 @@ const PhoneAppSection = ({
   );
 
   const innerClasses = classNames(
-    'testimonial-inner section-inner pt-0',
+    'testimonial-inner section-inner pt-0 col-sm',
     topDivider && 'has-top-divider',
     bottomDivider && 'has-bottom-divider'
   );
@@ -42,8 +42,8 @@ const PhoneAppSection = ({
     <section {...props} className={outerClasses}>
       <div className='container'>
         <div className={innerClasses}>
-          <div className='flex-row-center'>
-            <div className='p-32 mr-16'>
+          <div className='flex-row-center col-sm'>
+            <div className='lg-p-32 lg-mr-16'>
               <Image
                 src={require('./../../assets/Svg/deliveries.svg')}
                 alt='Features split 01'
@@ -51,8 +51,8 @@ const PhoneAppSection = ({
                 height={396}
               />
             </div>
-            <div className='p-32'>
-              <h2 className=''>
+            <div className='lg-p-32'>
+              <h2 className='center-content'>
                 It’s time for a bank account <br /> that treats you better.
               </h2>
               <br />
@@ -80,9 +80,9 @@ const PhoneAppSection = ({
             </div>
           </div>
           <hr />
-          <div className='flex-row-center'>
-            <div className='p-32'>
-              <h2 className=''>
+          <div className='flex-row-center col-sm-center'>
+            <div className='lg-p-32'>
+              <h2 className='center-content'>
                 Know when your account <br /> balance changes.
               </h2>
               <br />

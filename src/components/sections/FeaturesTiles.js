@@ -62,7 +62,7 @@ const FeaturesTiles = ({
 
                 <div className='features-tiles-item-content text-left'>
                   <h4 className='mt-0 mb-8 has-underline text-color-secondary'>
-                    Personal
+                    Personal Banking
                   </h4>
                   <p className='m-0 text-sm'>
                     Advance your personal savings and achieve your goals with
@@ -70,7 +70,7 @@ const FeaturesTiles = ({
                     your money.
                   </p>
                   <br />
-                  <Link to='/sign-up'>
+                  <Link to='/consumer'>
                     <Button tag='button' color='secondary' wideMobile>
                       Get Started
                     </Button>
@@ -101,7 +101,7 @@ const FeaturesTiles = ({
                     financing programs for business equipment financing.
                   </p>
                   <br />
-                  <Link to='/sign-up'>
+                  <Link to='/merchants'>
                     <Button tag='button' color='secondary' wideMobile>
                       Get Started
                     </Button>
@@ -135,7 +135,7 @@ const FeaturesTiles = ({
                     here to fix button
                   </p>
                   <br />
-                  <Link to='/sign-up'>
+                  <Link to='/acquirer'>
                     <Button tag='button' color='secondary' wideMobile>
                       Get Started
                     </Button>

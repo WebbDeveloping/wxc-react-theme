@@ -2,16 +2,16 @@ import React from 'react';
 
 export default function PhonePic() {
   return (
-    <div className='flex-row-center h-100'>
-      <div className='h-100 w-50 p-32 phone-img reveal-from-left'>
+    <div className='flex-row-center h-100 col-sm-center'>
+      <div className='h-100 lg-w-50 lg-p-32 phone-img reveal-from-left'>
         <img
           src={require('./../../assets/images/wxc/varophone.png')}
           alt='Features split 01'
         />
       </div>
-      <div className='w-50 reveal-from-right p-32 h-100'>
+      <div className='lg-w-50 reveal-from-right lg-p-32 h-100 sm-p-4'>
         <div className='h-100'>
-          <h2 className=''>
+          <h2 className='center-content'>
             How banking with no <br /> overdraft fees works.
           </h2>
           <p>
