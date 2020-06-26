@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../../utils/SectionProps';
 import Button from '../../elements/Button';
+import { Link } from 'react-router-dom';
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -58,21 +59,20 @@ const IconTiles = ({
                   </div>
                 </div>
                 <div className='features-tiles-item-content text-left'>
-                  <h4 className='mt-0 mb-8 has-underline text-color-secondary'>Personal Banking</h4>
+                  <h4 className='mt-0 mb-8 has-underline text-color-secondary'>
+                    Personal Banking
+                  </h4>
                   <p className='m-0 text-sm'>
                     Advance your personal savings and achieve your goals with
                     competitive deposit products that help you make the most of
                     your money.
                   </p>
                   <br />
-                  <Button
-                    tag='a'
-                    color='secondary'
-                    wideMobile
-                    // href='https://world-xchange.com/index.php'
-                  >
-                    Get started
-                  </Button>
+                  <Link to='/sign-up'>
+                    <Button tag='button' color='secondary' wideMobile>
+                      Get Started
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -91,20 +91,19 @@ const IconTiles = ({
                   </div>
                 </div>
                 <div className='features-tiles-item-content text-left'>
-                  <h4 className='mt-0 mb-8 has-underline text-color-secondary'>Business Banking</h4>
+                  <h4 className='mt-0 mb-8 has-underline text-color-secondary'>
+                    Business Banking
+                  </h4>
                   <p className='m-0 text-sm'>
                     Our digital technology and industry expertise enables vendor
                     financing programs for business equipment financing.
                   </p>
                   <br />
-                  <Button
-                    tag='a'
-                    color='secondary'
-                    wideMobile
-                    // href='https://world-xchange.com/index.php'
-                  >
-                    Get started
-                  </Button>
+                  <Link to='/sign-up'>
+                    <Button tag='button' color='secondary' wideMobile>
+                      Get Started
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -133,14 +132,11 @@ const IconTiles = ({
                     here to fix button
                   </p>
                   <br />
-                  <Button
-                    tag='a'
-                    color='secondary'
-                    wideMobile
-                    // href='https://world-xchange.com/index.php'
-                  >
-                    Get started
-                  </Button>
+                  <Link to='/sign-up'>
+                    <Button tag='button' color='secondary' wideMobile>
+                      Get Started
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>

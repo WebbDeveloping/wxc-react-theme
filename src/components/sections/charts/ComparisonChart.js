@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../../elements/Button';
 import ButtonGroup from '../../elements/ButtonGroup';
+import { Link } from 'react-router-dom';
 
 export default function ComparisonChart() {
   return (
@@ -148,12 +149,16 @@ export default function ComparisonChart() {
         </div>
         <div className='reveal-from-bottom mt-16' data-reveal-delay='600'>
           <ButtonGroup>
-            <Button tag='a' color='primary' wideMobile href='/sign-up'>
-              Get started
-            </Button>
-            <Button tag='a' color='secondary' wideMobile href='/sign-up'>
-              Read More
-            </Button>
+            <Link to='/sign-up'>
+              <Button tag='button' color='primary'>
+                Get Started
+              </Button>
+            </Link>
+            <Link to='/sign-up'>
+              <Button tag='button' color='secondary'>
+                Read More
+              </Button>
+            </Link>
           </ButtonGroup>
         </div>
       </div>

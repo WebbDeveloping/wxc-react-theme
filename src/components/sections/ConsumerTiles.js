@@ -44,7 +44,7 @@ const ConsumerTiles = ({
             <SubPageHero
               title='Ditch monthly bank fees for good'
               subtitle='Get an XBanc Account with no monthly fees or minimum balance'
-              button1='Get started'
+              button1='Get Started'
               button2='Read More'
             />
             <hr />

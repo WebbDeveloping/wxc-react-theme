@@ -43,7 +43,7 @@ const MerchantTiles = ({
           <SubPageHero
             title={`No Overdraft up to $50`}
             subtitle={`Avoid overdraft fees with a secure online checking account`}
-            button1='Get started'
+            button1='Get Started'
             button2='Read More'
           />
         </div>{' '}

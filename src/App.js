@@ -43,55 +43,56 @@ const App = () => {
       ref={childRef}
       children={() => (
         <Switch>
-          <AppRoute exact path='/' component={Home} layout={LayoutDefault} />
+          
           <AppRoute
-            exact
+            // exact
             path='/article'
             component={Article}
             layout={LayoutDefault}
           />
           <AppRoute
-            exact
+            // exact
             path='/about-us'
             component={AboutUs}
             layout={LayoutDefault}
           />
           <AppRoute
-            exact
+            // exact
             path='/consumer'
             component={Consumer}
             layout={LayoutDefault}
           />
           <AppRoute
-            exact
+            // exact
             path='/merchants'
             component={Merchants}
             layout={LayoutDefault}
           />
           <AppRoute
-            exact
+            // exact
             path='/acquirer'
             component={Acquirer}
             layout={LayoutDefault}
           />
           <AppRoute
-            exact
+            // exact
             path='/bankers'
             component={Bankers}
             layout={LayoutDefault}
           />
           <AppRoute
-            exact
+            // exact
             path='/sign-up'
             component={SignUp}
             layout={LayoutDefault}
           />
           <AppRoute
-            exact
+            // exact
             path='/legal-agreement'
             component={LegalAgreement}
             layout={LayoutDefault}
           />
+          <AppRoute exact path='/' component={Home} layout={LayoutDefault} />
         </Switch>
       )}
     />

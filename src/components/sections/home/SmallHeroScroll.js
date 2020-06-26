@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from '../../elements/Image';
 import Button from '../../elements/Button';
+import { Link } from 'react-router-dom';
 
 export default function SmallHeroScroll({ click, data }) {
   // TODO:
@@ -29,30 +30,31 @@ export default function SmallHeroScroll({ click, data }) {
   // *
   return (
     <div className='container  w-100 lg-hide box-container pl-0 pr-0'>
-    <div className='w-100 has-bg-color container pl-24 pr-24'>
-
-      <div className=' flex-row-around box'>
-        <h4 onClick={() => click(data['id'] - 1)}>&larr;</h4>
-        <div onClick={() => click(data['id'])}>
-          <h4>{data['color-heading']}</h4>
+      <div className='w-100 has-bg-color container pl-24 pr-24'>
+        <div className=' flex-row-around box'>
+          <h4 onClick={() => click(data['id'] - 1)}>&larr;</h4>
+          <div onClick={() => click(data['id'])}>
+            <h4>{data['color-heading']}</h4>
+          </div>
+          <h4 className='bg-color-dark' onClick={() => click(data['id'] + 1)}>
+            &rarr;
+          </h4>
         </div>
-        <h4 className='bg-color-dark' onClick={() => click(data['id'] + 1)}>
-          &rarr;
-        </h4>
+        <div className='m-4 fw-500 sm-header'>
+          <h1 className=' mt-0 ml-16 mr-16'>{data['smHeading']}</h1>
+          <p className=' mt-0 pl-16 pr-16'>{data['subheading']}</p>
+        </div>
+        <br />
+        <div className='lg-hide'>
+          <Link to='/sign-up'>
+            <Button tag='button' color='secondary'>
+              Get Started
+            </Button>
+          </Link>
+        </div>
+        <br />
+        <br />
       </div>
-      <div className='m-4 fw-500 sm-header'>
-        <h1 className=' mt-0 ml-16 mr-16'>{data['smHeading']}</h1>
-        <p className=' mt-0 pl-16 pr-16'>{data['subheading']}</p>
-      </div>
-      <br />
-      <div className='lg-hide'>
-        <Button tag='a' color='secondary' href='/sign-up'>
-          Get Started
-        </Button>
-      </div>
-      <br />
-      <br />
-    </div>
       <div className='tiles-item reveal-from-bottom' data-reveal-delay='200'>
         <div className='tiles-item-inner'>
           <div className='features-tiles-item-header pr-8'>

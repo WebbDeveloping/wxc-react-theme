@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../../utils/SectionProps';
+import { Link } from 'react-router-dom';
 import Image from '../../elements/Image';
 import Button from '../../elements/Button';
 
@@ -26,18 +27,11 @@ const TileSection = ({
   tiletwotext,
   ...props
 }) => {
-
   const innerClasses = classNames(
     'features-tiles-inner section-inner pt-0',
     topDivider && 'has-top-divider',
     bottomDivider && 'has-bottom-divider'
   );
-  // const {
-  //   tileonehead,
-  //   tiletwohead,
-  //   tileonetext,
-  //   tiletwotext,
-  // } = props;
 
   return (
     <section {...props}>
@@ -62,14 +56,15 @@ const TileSection = ({
                   <p className='m-0 text-sm'>{tileonetext}</p>
                 </div>
                 <br />
-                <Button
-                  tag='a'
-                  color='secondary'
-                  wideMobile
-                  href='https://world-xchange.com/index.php'
-                >
-                  Get started
-                </Button>
+                <Link to='/sign-up'>
+                  <Button
+                    tag='button'
+                    color='secondary'
+                    wideMobile
+                  >
+                    Get started
+                  </Button>
+                </Link>
               </div>
             </div>
 
@@ -93,14 +88,15 @@ const TileSection = ({
                   <p className='m-0 text-sm'>{tiletwotext}</p>
                 </div>
                 <br />
-                <Button
-                  tag='a'
-                  color='secondary'
-                  wideMobile
-                  href='https://world-xchange.com/index.php'
-                >
-                  Get started
-                </Button>
+                <Link to='/sign-up'>
+                  <Button
+                    tag='button'
+                    color='secondary'
+                    wideMobile
+                  >
+                    Get Started
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

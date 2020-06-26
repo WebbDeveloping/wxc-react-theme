@@ -1,27 +1,20 @@
 import React from 'react';
 import Image from '../elements/Image';
 import Button from '../elements/Button';
-import ButtonGroup from '../elements/ButtonGroup';
+import { Link } from 'react-router-dom';
 
 export default function SubPageHero({ title, subtitle, button1, button2 }) {
   return (
     <div className='flex-row-around col-sm center-content'>
       <div className='w-50 sm-w-100 flex-col-start headline'>
-        <h1 className='headline-title reveal-from-left'>
-          {title}
-        </h1>
-        <p className='reveal-from-left w-80 headline-paragraph'>
-          {subtitle}
-        </p>
+        <h1 className='headline-title reveal-from-left'>{title}</h1>
+        <p className='reveal-from-left w-80 headline-paragraph'>{subtitle}</p>
         <div className='reveal-from-left mt-16'>
-          <ButtonGroup>
-            <Button tag='a' color='primary' wideMobile href='/sign-up'>
+          <Link to='/sign-up'>
+            <Button tag='button' color='secondary'>
               {button1}
             </Button>
-            <Button tag='a' color='secondary' wideMobile href='/sign-up'>
-              {button2}
-            </Button>
-          </ButtonGroup>
+          </Link>
         </div>
       </div>
       <br />

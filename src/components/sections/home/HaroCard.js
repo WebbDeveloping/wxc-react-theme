@@ -1,7 +1,7 @@
 import React from 'react';
-import ButtonGroup from '../../elements/ButtonGroup';
 import Button from '../../elements/Button';
 import Image from '../../elements/Image';
+import { Link } from 'react-router-dom';
 
 export default function HaroCard({ data, animateRight }) {
   return (
@@ -19,16 +19,11 @@ export default function HaroCard({ data, animateRight }) {
             <p className=' m-4'>{data['subheading']}</p>
             <br />
             <div className=''>
-              <ButtonGroup>
-                <Button
-                  tag='a'
-                  color='secondary'
-                  wideMobile
-                  href='/sign-up'
-                >
+              <Link to='/sign-up'>
+                <Button tag='button' color='secondary' wideMobile>
                   {data['button-text']}
                 </Button>
-              </ButtonGroup>
+              </Link>
             </div>
           </div>
         </div>
@@ -37,7 +32,6 @@ export default function HaroCard({ data, animateRight }) {
             className='hero-svg h-100 w-100'
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 308.24 228.66'
-            
           >
             <g data-name='Layer 2' fill='#00376D'>
               <g id='OBJECTS'>
