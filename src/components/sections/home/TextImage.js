@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import Button from '../../elements/Button';
 import { Link } from 'react-router-dom';
 import Image from '../../elements/Image';
-import { ScrollToTopControlller } from '../../../utils/ScrollToTop';
 
 export default function TextImage({
   className,
@@ -41,15 +40,11 @@ export default function TextImage({
           <div className='container-xs'>
             <p className=' m-4'>We take your security seriously</p>
             <div className='pt-8'>
-              {/* <ScrollToTopControlller > */}
               <Link to='/sign-up'>
                 <Button tag='button' color='secondary'>
                   Get Started
                 </Button>
               </Link>
-              {/* </ScrollToTopControlller > */}
-              {/* <ScrollToTopControlller /> */}
-              
             </div>
             <br className='lg-hide' />
             <br className='lg-hide' />
