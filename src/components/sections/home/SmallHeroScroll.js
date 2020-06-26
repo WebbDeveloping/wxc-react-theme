@@ -55,16 +55,6 @@ export default function SmallHeroScroll({ click, data }) {
     </div>
       <div className='tiles-item reveal-from-bottom' data-reveal-delay='200'>
         <div className='tiles-item-inner'>
-          {/* <div className='features-tiles-item-header'>
-                  <div className='mb-16'>
-                    <Image
-                      src={require('../../../assets/Svg/credit-card.svg')}
-                      alt='Features tile icon 05'
-                      width={64}
-                      height={64}
-                    />
-                  </div>
-                </div> */}
           <div className='features-tiles-item-header pr-8'>
             <div className='features-tiles-item-image-merchant mb-16'>
               <Image
