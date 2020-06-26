@@ -15,7 +15,6 @@ export default function HaroCard({ data, animateRight }) {
             {data['heading']}
           </h1>
           <h1 className='mb-4 mt-4 fs-80'>{data['heading-2']}</h1>
-          <br />
           <div className='container-xs'>
             <p className=' m-4'>{data['subheading']}</p>
             <br />
