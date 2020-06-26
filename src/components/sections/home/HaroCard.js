@@ -9,7 +9,7 @@ export default function HaroCard({ data, animateRight }) {
       <div className='col-sm w-50 sm-hide relative'>
         <div className='hero-content p-32 lg-mr-32 img-absolute bold p-8 flex-col-center w-100  reveal-from-left'>
           <h1 className='mb-0 fs-80'>
-            <span className='text-color-secondary mr-16 fs-80'>
+            <span className='text-color-secondary fs-80'>
               {data['color-heading']}
             </span>
             {data['heading']}
