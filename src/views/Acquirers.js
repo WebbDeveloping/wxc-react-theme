@@ -10,7 +10,7 @@ const Acquirer = () => {
     <section className='features-tiles section'>
       <div className='container'>
         <div className='col-sm pt-0'>
-        <div className=' has-bg-color ml-8'>
+        <div className=' has-bg-color'>
         <br />
             <SubPageHero
               title='Early direct

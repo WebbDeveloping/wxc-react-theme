@@ -45,7 +45,7 @@ const IconTiles = ({
       <div className='container'>
         <div className={innerClasses}>
           <div className='flex-row-around col-sm w-100'>
-            <div className='tiles-item reveal-from-bottom card-bg   m-16 align-item'>
+            <div className='tiles-item reveal-from-bottom card-bg  align-item'>
               <div className='tiles-item-inner align-item flex-col-between'>
                 <div className=' flex-col'>
                   <div className='max-height mb-16'>
@@ -77,7 +77,7 @@ const IconTiles = ({
               </div>
             </div>
 
-            <div className='tiles-item reveal-from-bottom card-bg   m-16 align-item'>
+            <div className='tiles-item reveal-from-bottom card-bg  align-item'>
               <div className='tiles-item-inner align-item flex-col-between'>
                 <div className='flex-col'>
                   <div className=' mb-16 max-height w-100'>
@@ -108,7 +108,7 @@ const IconTiles = ({
               </div>
             </div>
 
-            <div className='tiles-item reveal-from-bottom card-bg   m-16 align-item'>
+            <div className='tiles-item reveal-from-bottom card-bg  align-item'>
               <div className='tiles-item-inner align-item flex-col-between'>
                 <div className=' flex-col'>
                   <div className=' mb-16 max-height'>

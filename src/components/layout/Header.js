@@ -83,7 +83,7 @@ const Header = ({
       <div className='container'>
         <div
           className={classNames(
-            'site-header-inner',
+            'site-header-inner ml-16',
             bottomDivider && 'has-bottom-divider'
           )}
         >
@@ -92,12 +92,12 @@ const Header = ({
             <>
               <button
                 ref={hamburger}
-                className='header-nav-toggle'
+                className='header-nav-toggle mr-16'
                 onClick={isActive ? closeMenu : openMenu}
               >
                 <span className='screen-reader'>Menu</span>
                 <span className='hamburger'>
-                  <span className='hamburger-inner'></span>
+                  <span className='hamburger-inner '></span>
                 </span>
               </button>
               <nav

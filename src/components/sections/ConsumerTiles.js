@@ -40,7 +40,7 @@ const ConsumerTiles = ({
       <br />
       <div className='container pt-0'>
         <div className={innerClasses}>
-          <div className='p-32 has-bg-color ml-8'>
+          <div className='p-32 has-bg-color'>
             <SubPageHero
               title='Ditch monthly bank fees for good'
               subtitle='Get an XBanc Account with no monthly fees or minimum balance'

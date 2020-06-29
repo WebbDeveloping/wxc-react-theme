@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '../../elements/Button';
-import ButtonGroup from '../../elements/ButtonGroup';
 import { Link } from 'react-router-dom';
 
 export default function ComparisonChart() {
@@ -147,19 +146,21 @@ export default function ComparisonChart() {
             />
           </div>
         </div>
-        <div className='reveal-from-bottom mt-16' data-reveal-delay='600'>
-          <ButtonGroup>
+        <div className='chart-buttons flex-row-start reveal-from-bottom mt-16' data-reveal-delay='600'>
+          {/* <ButtonGroup> */}
+            
             <Link to='/sign-up'>
               <Button tag='button' color='primary'>
                 Get Started
               </Button>
             </Link>
-            <Link to='/sign-up'>
+            <div className='ml-8 mr-8 sm-hide' />
+            <Link to='/sign-up' className='sm-hide'>
               <Button tag='button' color='secondary'>
                 Read More
               </Button>
             </Link>
-          </ButtonGroup>
+          {/* </ButtonGroup> */}
         </div>
       </div>
     </div>

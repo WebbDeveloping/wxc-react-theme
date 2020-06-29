@@ -42,12 +42,12 @@ const CompetitiveAdvantage = ({
     <section {...props} className={outerClasses}>
       <div className='container-sm'>
         <div className={innerClasses}>
-          <div className='hero-content'>
+          <div className='hero-content p-8'>
             <h1
               className='mt-0 mb-16 reveal-from-bottom'
               data-reveal-delay='200'
             >
-              THE SEARCH FOR COMPETITIVE ADVANTAGES,
+              THE SEARCH FOR COMPETITIVE ADVANTAGES
             </h1>
             <div className='container-xs'>
               <p
@@ -89,7 +89,7 @@ const CompetitiveAdvantage = ({
             </div>
           </div>
           <br />
-          <div className='hero-content'>
+          <div className='hero-content p-8'>
             <h1
               className='mt-0 mb-16 reveal-from-bottom'
               data-reveal-delay='200'
