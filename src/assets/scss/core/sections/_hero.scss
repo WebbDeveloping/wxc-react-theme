@@ -61,14 +61,51 @@
   .box {
     height: 80px;
     width: 100%;
-    &:hover {
-      h4 {
-        color: get-color(secondary, 2);
-      }
+    &before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 15%;
+      width: 3px;
+      background-color: get-color(secondary, 2);
+      transform: scaleY(0);
+    //   padding-bottom: 3px;
+    
+      transition: transform 0.2s,
+            width 0.4s cubic-bezier(1, 0, 0, 1) 0s, 
+            background-color .1s;
     }
-    h4 {
-      color: color(heading);
+    &:hover::before,
+    &btn--active::before {
+      transform: scaleY(1);
+      width: 100%;
+      padding: 2px 9px;
     }
+    &:active::before{
+      background-color: get-color(light, 2);
+    }
+    &:link,
+    &:visited {
+      color: get-color(dark, 2);
+      text-decoration: none;
+      text-transform: uppercase;
+      display: block;
+      
+    
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+    // &:hover {
+    //   h4 {
+    //     color: get-color(secondary, 2);
+    //   }
+    // }
+    // h4 {
+    //   color: color(heading);
+    // }
   }
 }
 .text-shadow {

@@ -162,7 +162,7 @@ export default function SignUp({
           </div>
         </div>
         <hr />
-        <div className='container fs-14'>
+        <div className='container fs-14 p-16'>
           <p>
             All rights Reserved by XBanc, LLC 2020. Lorem ipsum dolor sit amet
             consectetur adipisicing elit. Libero, ab. Officia labore in

@@ -107,7 +107,7 @@ const Header = ({
                 <div className='header-nav-inner'>
                   <ul
                     className={classNames(
-                      'list-reset text-xs ',
+                      'list-reset text-xs side-nav',
                       navPosition && `header-nav-${navPosition}`
                     )}
                   >
@@ -116,23 +116,23 @@ const Header = ({
                         About Us
                       </Link>
                     </li> */}
-                    <li>
-                      <Link to='/consumer' onClick={closeMenu}>
+                    <li className='side-nav__item'>
+                      <Link className='side-nav__link' to='/consumer' onClick={closeMenu}>
                         Personal
                       </Link>
                     </li>
-                    <li>
-                      <Link to='/merchants' onClick={closeMenu}>
+                    <li className='side-nav__item'>
+                      <Link className='side-nav__link' to='/merchants' onClick={closeMenu}>
                         Business
                       </Link>
                     </li>
-                    <li>
-                      <Link to='/acquirer' onClick={closeMenu}>
+                    <li className='side-nav__item'>
+                      <Link className='side-nav__link' to='/acquirer' onClick={closeMenu}>
                         Commercial
                       </Link>
                     </li>
-                    <li>
-                      <Link to='/bankers' onClick={closeMenu}>
+                    <li className='side-nav__item'>
+                      <Link className='side-nav__link' to='/bankers' onClick={closeMenu}>
                         About
                       </Link>
                     </li>

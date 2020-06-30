@@ -825,6 +825,11 @@ img.has-shadow {
 }
 
 @include media('>medium') {
+  .test-hide{
+    display: none !important;
+  }
+}
+@include media('>medium') {
   .ta-l-desktop {
     text-align: left;
   }

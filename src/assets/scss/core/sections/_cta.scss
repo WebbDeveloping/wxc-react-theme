@@ -1,37 +1,95 @@
 .cta {
-
-	.section-inner {
-		padding-top: $cta--padding-t__mobile;
-		padding-bottom: $cta--padding-b__mobile;
+  .section-inner {
+    padding-top: $cta--padding-t__mobile;
+    padding-bottom: $cta--padding-b__mobile;
+  }
+  &-stat{
+	color: get-color(secondary, 2);
+  }
+  &-col{
+	border-right: 1px solid rgba(255,255,255,.5);
+	h5{
+		margin-right: 32px;
 	}
+  }
+  &-input{
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+  }
+
 }
 
 .cta-slogan {
-	margin-bottom: $cta-slogan--padding-v__mobile;
+  margin-bottom: $cta-slogan--padding-v__mobile;
+  line-height: 1.5;
 }
 
-@include media( '>medium' ) {
-
-	.cta {
-
-		.section-inner {
-			padding-top: $cta--padding-t__desktop;
-			padding-bottom: $cta--padding-b__desktop;
-		}
+@include media('>medium') {
+  .cta {
+    .section-inner {
+      padding-top: $cta--padding-t__desktop;
+      padding-bottom: $cta--padding-b__desktop;
 	}
+	
+  }
 
-	.cta-split {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+  .cta-split {
+    display: flex;
+    justify-content: center;
+    // align-items: sp
+  }
 
-	.cta-slogan {
-		margin-bottom: $cta-slogan--padding-v__desktop;
+  .cta-slogan {
+    margin-bottom: $cta-slogan--padding-v__desktop;
+    margin-top: 0;
+    color: #89d6f3;
 
-		.cta-split & {
-			margin-bottom: 0;
-			margin-right: $cta-slogan--padding-h__desktop;
-		}
-	}
+    .cta-split & {
+      margin-bottom: 0;
+      margin-right: $cta-slogan--padding-h__desktop;
+    }
+  }
 }
+// TODO... move THIS TO A BETTER SPOT
+.side-nav {
+	&__item {
+	  position: relative;
+  
+	}
+	&__item:before {
+	  content: '';
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  height: 15%;
+	  width: 3px;
+	  background-color: get-color(secondary, 2);
+	  transform: scaleY(0);
+	  transition: transform 0.2s,
+				  width 0.4s cubic-bezier(1, 0, 0, 1) 0s, 
+				  background-color .1s;
+	}
+	&__item:hover::before,
+	&__item--active::before {
+	  transform: scaleY(1);
+	  width: 100%;
+	  padding: 2px 9px;
+	}
+	&__item:active::before{
+		background-color: get-color(light, 2);
+	}
+	&__link:link,
+	&__link:visited {
+	  color: get-color(dark, 2);
+	  text-decoration: none;
+	  text-transform: uppercase;
+	  display: block;
+	  
+  
+	  display: flex;
+	  align-items: center;
+	  position: relative;
+	  z-index: 10;
+	}
+  }
