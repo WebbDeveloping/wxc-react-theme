@@ -37,7 +37,7 @@
 .flex-row {
   display: flex;
   flex-direction: row;
-  &-start{
+  &-start {
     justify-content: flex-start;
   }
 }
@@ -135,12 +135,11 @@
 .fs-14 {
   font-size: 14px;
 }
-.fs-80{
+.fs-80 {
   font-size: 80px !important;
 }
-.headline{
-  &-title{
-
+.headline {
+  &-title {
     font-family: 'NHaasGroteskDSW01-65Md';
     font-size: 90px;
     line-height: 1;
@@ -150,7 +149,7 @@
   }
 }
 // /display: none
-.d-none{
+.d-none {
   display: none;
 }
 
@@ -271,6 +270,37 @@
 .box-shadow {
   // box-shadow: 2px 2px 2px color(shadow);
 }
+
+// TODO: ADD TO  A BETTER SPOT... EVERYTHING BELOW THIS LINE.
+.about{
+  .dot{
+    height: 5px;
+    width: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  h6{
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+.slc-map{
+  margin-right: 0px;
+  padding-right: 0px;
+  img{
+    border: 5px solid get-color(secondary, 2);
+    height: 50%;
+    width: auto;
+
+  }
+  .address-box{
+    padding: 32px;
+  }
+}
+// TODO: ADD TO  A BETTER SPOT... EVERYTHING ABOVE THIS LINE
 .has-underline {
   text-decoration: underline;
 }
@@ -278,7 +308,13 @@
 img.has-shadow {
   border-radius: $img-radius;
 }
-.border-radius-100 {
+.img-container {
+  margin: 32px;
+  img {
+    border-radius: 50%;
+    height: auto;
+    width: 100%;
+  }
 }
 
 // Dividers
@@ -354,7 +390,6 @@ img.has-shadow {
 .intro-video {
   width: 100%;
 }
-
 
 // Spacing, margin
 .m-0 {
@@ -698,7 +733,7 @@ img.has-shadow {
 
 @include media('<=medium') {
   // SMALL HELPERS //
-  .md-hide{
+  .md-hide {
     display: none;
   }
   .img-text {
@@ -710,21 +745,20 @@ img.has-shadow {
   .sm-hide {
     display: none !important;
   }
-  .sm-w-100{
+  .sm-w-100 {
     width: 100% !important;
   }
   // .sm-w-50{
   //   width: 100% !important;
   // }
-  .sm-p-8{
+  .sm-p-8 {
     padding: 8px !important;
   }
-  .sm-p-4{
+  .sm-p-4 {
     padding: 4px !important;
   }
-  .headline{
-    &-title{
-  
+  .headline {
+    &-title {
       font-family: 'NHaasGroteskDSW01-65Md';
       font-size: 45px;
       line-height: 1;
@@ -732,7 +766,7 @@ img.has-shadow {
       // margin-bottom: 18px;
       font-weight: 700;
     }
-    &-paragraph{
+    &-paragraph {
       width: 100%;
     }
   }
@@ -740,13 +774,13 @@ img.has-shadow {
     display: flex;
     flex-direction: column;
   }
-  .sm-m-0{
+  .sm-m-0 {
     margin: 0 !important;
   }
-  .sm-pt-0{
+  .sm-pt-0 {
     padding-top: 0 !important;
   }
-  .sm-br-none{
+  .sm-br-none {
     border-radius: 0 !important;
   }
   .col-sm-between {
@@ -760,7 +794,7 @@ img.has-shadow {
     align-content: center;
     justify-content: center;
   }
-  .sm-text-center{
+  .sm-text-center {
     text-align: center;
   }
   .ta-l-mobile {
@@ -825,7 +859,7 @@ img.has-shadow {
 }
 
 @include media('>medium') {
-  .test-hide{
+  .test-hide {
     display: none !important;
   }
 }
@@ -860,10 +894,10 @@ img.has-shadow {
   .lg-hide {
     display: none;
   }
-  .lg-w-100{
+  .lg-w-100 {
     width: 100% !important;
   }
-  .lg-w-50{
+  .lg-w-50 {
     width: 50% !important;
   }
   .lg-p-32 {

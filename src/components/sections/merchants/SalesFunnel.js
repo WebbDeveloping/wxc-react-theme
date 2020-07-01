@@ -120,7 +120,7 @@ const SalesFunnel = ({
           </div>
         </div>
       </div>
-      <ImageGrid />
+      {/* <ImageGrid /> */}
     </section>
   );
 };

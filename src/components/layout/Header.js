@@ -132,7 +132,7 @@ const Header = ({
                       </Link>
                     </li>
                     <li className='side-nav__item'>
-                      <Link className='side-nav__link' to='/bankers' onClick={closeMenu}>
+                      <Link className='side-nav__link' to='/about-us' onClick={closeMenu}>
                         About
                       </Link>
                     </li>
