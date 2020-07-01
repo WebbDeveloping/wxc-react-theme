@@ -2,7 +2,6 @@ import React from 'react';
 import LearnMore from '../components/sections/LearnMore';
 import Cta from '../components/sections/Cta';
 import HeroNoImg from '../components/sections/HeroNoImg';
-import Image from '../components/elements/Image';
 import VideoSection from '../components/sections/VideoSection';
 
 const AboutUs = () => {
@@ -54,7 +53,7 @@ const AboutUs = () => {
           <div className='bg-color-light-2 w-100 p-16 m-16 reveal-from-bottom'>
             <div className='inner-card'>
               <div className='img-container'>
-                <img src={require('../assets/images/wxc/avatar_sandy.png')} />
+                <img src={require('../assets/images/wxc/avatar_sandy.png')} alt='sandy avatar' />
               </div>
               <hr />
               <div className='name-container'>
@@ -79,7 +78,7 @@ const AboutUs = () => {
           <div className='bg-color-light-2 w-100 p-16 m-16 reveal-from-right'>
             <div className='inner-card'>
               <div className='img-container'>
-                <img src={require('../assets/images/wxc/avatar_ben.png')} />
+                <img src={require('../assets/images/wxc/avatar_ben.png')} alt='ben avatar' />
               </div>
               <hr />
               <div className='name-container'>

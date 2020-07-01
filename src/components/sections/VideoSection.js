@@ -1,29 +1,11 @@
 import React from 'react';
-import classNames from 'classnames';
 
-export default function VideoSection(
-  className,
-  topOuterDivider,
-  bottomOuterDivider,
-  topDivider,
-  bottomDivider,
-  hasBgColor,
-  invertColor,
-  ...props
-) {
-  const outerClasses = classNames(
-    'hero section center-content',
-    bottomOuterDivider && 'has-bottom-divider',
-    hasBgColor && 'has-bg-color',
-    invertColor && 'invert-color',
-    className
-  );
-
-  const innerClasses = classNames('hero-inner section-inner');
+export default function VideoSection() {
   return (
     <div className='p-16'>
       <iframe
         className='intro-video'
+        title='unique'
         width='300'
         height='500'
         src='https://www.youtube.com/embed/sNwKcG445s8'

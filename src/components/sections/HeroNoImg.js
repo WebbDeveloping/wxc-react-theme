@@ -1,8 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
-import { Link } from 'react-router-dom';
-import Button from '../elements/Button';
 
 const propTypes = {
   ...SectionProps.types
