@@ -70,7 +70,7 @@ const TileSection = ({
 
             <div
               className='tiles-item reveal-from-bottom'
-              data-reveal-delay='400'
+              // data-reveal-delay='400'
             >
               <div className='tiles-item-inner'>
                 <div className='features-tiles-item-header'>

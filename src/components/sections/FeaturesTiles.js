@@ -48,9 +48,9 @@ const FeaturesTiles = ({
         <div className={innerClasses}>
           {/* <SectionHeader data={sectionHeader} className='center-content' /> */}
           {/* <div className={tilesClasses}> */}
-          <div className='flex-row-center col-sm'>
-            <div className='tiles-item reveal-from-bottom card-bg '>
-              <div className='tiles-item-inner flex-col h-100'>
+          <div className='flex-row-center col-sm card-bg'>
+            <div className='tiles-item reveal-from-bottom  h-100'>
+              <div className='tiles-item-inner center-content-mobile flex-col h-100'>
                 <div className=' mb-16'>
                   <Image
                     src={require('./../../assets/Svg/online_banking.svg')}
@@ -60,7 +60,7 @@ const FeaturesTiles = ({
                   />
                 </div>
 
-                <div className='features-tiles-item-content text-left'>
+                <div className='features-tiles-item-content text-left center-content-mobile h-100'>
                   <h4 className='mt-0 mb-8 has-underline text-color-secondary'>
                     Personal Banking
                   </h4>
@@ -80,10 +80,10 @@ const FeaturesTiles = ({
             </div>
 
             <div
-              className='tiles-item reveal-from-bottom card-bg '
+              className='tiles-item reveal-from-bottom  h-100'
               data-reveal-delay='200'
             >
-              <div className='tiles-item-inner flex-col h-100'>
+              <div className='tiles-item-inner center-content-mobile flex-col h-100'>
                 <div className='mb-16'>
                   <Image
                     src={require('./../../assets/Svg/shop.svg')}
@@ -92,7 +92,7 @@ const FeaturesTiles = ({
                     height={264}
                   />
                 </div>
-                <div className='features-tiles-item-content text-left'>
+                <div className='features-tiles-item-content text-left center-content-mobile h-100'>
                   <h4 className='mt-0 mb-8 has-underline text-color-secondary'>
                     Business Banking
                   </h4>
@@ -111,10 +111,10 @@ const FeaturesTiles = ({
             </div>
 
             <div
-              className='tiles-item reveal-from-bottom card-bg '
+              className='tiles-item reveal-from-bottom  h-100'
               data-reveal-delay='400'
             >
-              <div className='tiles-item-inner flex-col h-100'>
+              <div className='tiles-item-inner center-content-mobile flex-col h-100'>
                 <div className='mb-16'>
                   <Image
                     src={require('./../../assets/Svg/factory.svg')}
@@ -125,7 +125,7 @@ const FeaturesTiles = ({
                 </div>
                 <br />
                 <br />
-                <div className='features-tiles-item-content  text-left '>
+                <div className='features-tiles-item-content  text-left center-content-mobile center-content-mobile h-100 '>
                   <h4 className='mt-0 mb-8 has-underline text-color-secondary'>
                     Commercial Banking
                   </h4>

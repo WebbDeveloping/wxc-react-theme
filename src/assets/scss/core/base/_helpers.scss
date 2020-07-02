@@ -287,6 +287,11 @@
     margin-right: 8px;
   }
 }
+.name-container{
+  h3{
+    color: get-color(secondary, 2);
+  }
+}
 .slc-map{
   margin-right: 0px;
   padding-right: 0px;
@@ -297,13 +302,17 @@
 
   }
   .address-box{
-    padding: 32px;
+    padding-left: 32px;
   }
 
 }
+.border-right{
+  border-right: 3px solid rgba(255, 255, 255, 0.5);
+
+}
 .border-t-b{
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 3px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
   margin-bottom: 32px;
 }
 // TODO: ADD TO  A BETTER SPOT... EVERYTHING ABOVE THIS LINE
@@ -319,7 +328,7 @@ img.has-shadow {
   img {
     border-radius: 50%;
     height: auto;
-    width: 100%;
+    width: 50%;
   }
 }
 
@@ -738,6 +747,21 @@ img.has-shadow {
 }
 
 @include media('<=medium') {
+
+  .slc-map{
+    margin-right: 0px;
+    padding-right: 0px;
+    img{
+      border: 5px solid get-color(secondary, 2);
+      height: auto;
+      width: auto;
+  
+    }
+    .address-box{
+      padding-left: 32px;
+    }
+  
+  }
   // SMALL HELPERS //
   .md-hide {
     display: none;

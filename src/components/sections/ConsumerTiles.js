@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
-import PhoneAppSection from './PhoneAppSection';
-import PhonePic from './PhonePic';
+// import PhoneAppSection from './PhoneAppSection';
+// import PhonePic from './PhonePic';
 import SubPageHero from './SubPageHero';
 
 const propTypes = {
@@ -47,12 +47,6 @@ const ConsumerTiles = ({
               button1='Get Started'
               button2='Read More'
             />
-            <hr />
-            <hr />
-            <div className='reveal-from-left'>
-              <PhoneAppSection />
-              <PhonePic />
-            </div>
           </div>
         </div>
       </div>

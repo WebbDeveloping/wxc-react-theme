@@ -30,7 +30,7 @@ const HeroNoImg = ({
   );
 
   const innerClasses = classNames(
-    'hero-inner section-inner flex-row-start ml-32 mb-0 pb-0',
+    'hero-inner section-inner flex-row-start lg-ml-32 mb-0 pb-0 col-sm-center',
     topDivider && 'has-top-divider',
     bottomDivider && 'has-bottom-divider'
   );
@@ -38,9 +38,9 @@ const HeroNoImg = ({
   return (
     <section {...props} className={outerClasses}>
       <div className={innerClasses}>
-        <div className='ml-32 pl-32'>
+        <div className='lg-ml-32 lg-pl-32 '>
           <h1
-            className='mt-0 reveal-from-left fs-80 cta-col p-32 mb-0'
+            className='mt-0 reveal-from-left fs-80 border-right p-32 mb-0'
             data-reveal-delay='200'
           >
             ABOUT
@@ -48,7 +48,7 @@ const HeroNoImg = ({
           </h1>
         </div>
       </div>
-      <div className='w-100 border-t-b ml-32'>
+      <div className='w-100 border-t-b lg-ml-32'>
         <h4 className='fs-14'>OUR STORY IS EPIC</h4>
       </div>
     </section>

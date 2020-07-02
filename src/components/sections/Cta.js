@@ -59,7 +59,7 @@ const Cta = ({
   } else {
     return (
       <section {...props} className={outerClasses}>
-        <br />
+        {/* <br /> */}
         <br />
         <br />
         <br />
@@ -67,7 +67,7 @@ const Cta = ({
           <div className={innerClasses}>
             <div className='cta-slogan flex-row-center lg-ml-32'>
               <h1 className='sm-hide lg-ml-32 mb-32 pb-32 fs-80'>
-                The Modern World's Best Pilots.
+                The Modern World's Best Bank.
               </h1>
               <h1 className='lg-hide fs-80'>
                 Get <div className='pt-16' /> Started
@@ -78,7 +78,7 @@ const Cta = ({
                 <div className='flex-row-center'>
                   <h5>
                     <span className='cta-stat fs-50'>40.7 trillion</span>
-                    <br /> Miles Flown
+                    <br />Transactions to Date
                   </h5>
                 </div>
               </div>
@@ -86,7 +86,7 @@ const Cta = ({
                 <div className='flex-row-center'>
                   <h5>
                     <span className='cta-stat fs-50'>21 million</span>
-                    <br /> Safe Landings each MONTH
+                    <br /> Happy Customers
                   </h5>
                 </div>
               </div>
@@ -94,7 +94,7 @@ const Cta = ({
                 <div className='flex-col-center'>
                   <h5>
                     <span className='cta-stat fs-50'>100,000</span>
-                    <br /> Pilots In Training
+                    <br /> Small Businesses helped
                   </h5>
                 </div>
               </div>

@@ -146,8 +146,10 @@ export default function ComparisonChart() {
             />
           </div>
         </div>
-        <div className='chart-buttons flex-row-start reveal-from-bottom mt-16' data-reveal-delay='600'>
-          {/* <ButtonGroup> */}
+        <div
+         className='chart-buttons flex-row-start reveal-from-bottom mt-16'
+          data-reveal-delay='200'
+          >
             
             <Link to='/sign-up'>
               <Button tag='button' color='primary'>
@@ -160,7 +162,6 @@ export default function ComparisonChart() {
                 Read More
               </Button>
             </Link>
-          {/* </ButtonGroup> */}
         </div>
       </div>
     </div>

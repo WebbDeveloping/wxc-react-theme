@@ -58,7 +58,7 @@ const CompetitiveAdvantage = ({
               </p>
             </div>
           </div>
-          <div className='reveal-from-bottom' data-reveal-delay='600'>
+          <div className='reveal-from-bottom' data-reveal-delay='200'>
             <div className='flex-row col-sm  m-0'>
               <h5 className=' m-24'>
                 <span className='text-color-primary'>PROCESSING RATES</span> -
@@ -105,7 +105,7 @@ const CompetitiveAdvantage = ({
               </p>
             </div> */}
           </div>
-          <div className='reveal-from-bottom' data-reveal-delay='600'>
+          <div className='reveal-from-bottom' data-reveal-delay='200'>
             <div className='flex-row col-sm  m-0'>
               <h5 className=' m-24'>
                 <span className='text-color-primary'>FRAUD-PROOF</span> - A

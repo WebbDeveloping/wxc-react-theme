@@ -56,7 +56,7 @@ const GetApp = ({
               >
                 and use wherever you see this sign.
               </p>
-              <div className='reveal-from-bottom' data-reveal-delay='600'>
+              <div className='reveal-from-bottom' data-reveal-delay='200'>
                 <Image
                   src={require('./../../assets/images/wxc/xpay_decal.png')}
                   alt='Features split 01'

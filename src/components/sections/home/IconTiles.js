@@ -58,7 +58,7 @@ const IconTiles = ({
                     />
                   </div>
                 </div>
-                <div className='features-tiles-item-content text-left'>
+                <div className='features-tiles-item-content text-left center-content-mobile'>
                   <h4 className='mt-0 mb-8 has-underline text-color-secondary'>
                     Personal Banking
                   </h4>
@@ -90,7 +90,7 @@ const IconTiles = ({
                     />
                   </div>
                 </div>
-                <div className='features-tiles-item-content text-left'>
+                <div className='features-tiles-item-content text-left center-content-mobile'>
                   <h4 className='mt-0 mb-8 has-underline text-color-secondary'>
                     Business Banking
                   </h4>
@@ -122,7 +122,7 @@ const IconTiles = ({
                     />
                   </div>
                 </div>
-                <div className='features-tiles-item-content text-left'>
+                <div className='features-tiles-item-content text-left center-content-mobile'>
                   <h4 className='mt-0 mb-8 has-underline text-color-secondary'>
                     Commercial Banking
                   </h4>

@@ -51,7 +51,7 @@ const PhoneAppSection = ({
                 height={396}
               />
             </div>
-            <div className='lg-p-32'>
+            <div className='lg-p-32 p-16'>
               <h2 className='center-content'>
                 It’s time for a bank account <br /> that treats you better.
               </h2>
@@ -81,7 +81,7 @@ const PhoneAppSection = ({
           </div>
           <hr />
           <div className='flex-row-center col-sm-center'>
-            <div className='lg-p-32'>
+            <div className='lg-p-32 center-content-mobile p-16'>
               <h2 className='center-content'>
                 Know when your account <br /> balance changes.
               </h2>
